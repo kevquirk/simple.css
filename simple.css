@@ -12,9 +12,8 @@
   --text-light: #666;
   --border: #D8DAE1;
   --accent: #0D47A1;
-  --accent2: #90CAF9;
-  --accent3: #E91E63;
-
+  --accent-light: #90CAF9;
+  --code: #D81B60;
 }
 
 /* Dark theme */
@@ -26,8 +25,8 @@
     --text-light: #808080;
     --border: #666;
     --accent: #FFB300;
-    --accent2: #FFECB3;
-    --accent3: #F06292;
+    --accent-light: #FFECB3;
+    --code: #F06292;
   }
 
   img {
@@ -101,7 +100,6 @@ nav a {
 
 nav a:hover {
   color: var(--accent) !important;
-  background: var(--accent-light);
   border-color: var(--accent);
 }
 
@@ -275,7 +273,7 @@ hr {
 
 mark {
 	padding: 3px 6px;
-	background: var(--accent2);
+	background: var(--accent-light);
 }
 
 main img {
@@ -315,12 +313,12 @@ kbd,
 samp {
 	font-family: var(--mono-font);
   font-size: 1.1rem;
-  color: var(--accent3);
+  color: var(--code);
 }
 
 kbd {
-  border: 1px solid var(--accent3);
-	border-bottom: 3px solid var(--accent3);
+  border: 1px solid var(--code);
+	border-bottom: 3px solid var(--code);
   border-radius: 5px;
   padding: .1rem;
 }
@@ -337,6 +335,7 @@ pre {
 /* Fix embedded code within pre */
 pre code {
     color: var(--text);
+    background: none;
     margin: 0;
     padding: 0;
 }

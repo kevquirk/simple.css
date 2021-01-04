@@ -253,7 +253,9 @@ ul {
 textarea,
 select,
 input {
-	padding: 6px 12px;
+  font-size: inherit;
+  font-family: inherit;
+	padding: .5rem;
 	margin-bottom: .5rem;
   color: var(--text);
 	background: var(--bg);
@@ -261,6 +263,26 @@ input {
 	border-radius: 5px;
 	box-shadow: none;
 	box-sizing: border-box;
+  width: 60%;
+}
+
+/* Make the textarea wider than other inputs */
+textarea {
+  width: 80%
+}
+
+/* Ensures the checkbox doesn't have a 50% width like other input fields */
+#checkbox {
+  width: 0;
+}
+
+/* Makes input fields wider on smaller screens */
+@media only screen and (max-width: 720px) {
+  textarea,
+  select,
+  input {
+    width: 100%;
+  }
 }
 
 /* Without this any HTML using <fieldset> shows ugly borders and has additional padding/margin. (Issue #3) */

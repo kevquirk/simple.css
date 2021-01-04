@@ -263,6 +263,13 @@ input {
 	box-sizing: border-box;
 }
 
+/* Without this any HTML using <fieldset> shows ugly borders and has additional padding/margin. (Issue #3) */
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
 /* Misc body elements */
 
 hr {

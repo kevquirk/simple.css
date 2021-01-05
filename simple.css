@@ -271,11 +271,6 @@ textarea {
   width: 80%
 }
 
-/* Ensures the checkbox doesn't have a 50% width like other input fields */
-#checkbox {
-  width: 0;
-}
-
 /* Makes input fields wider on smaller screens */
 @media only screen and (max-width: 720px) {
   textarea,
@@ -283,6 +278,11 @@ textarea {
   input {
     width: 100%;
   }
+}
+
+/* Ensures the checkbox and radio inputs do not have a set width like other input fields */
+input[type="checkbox"], input[type="radio"]{
+  width: auto;
 }
 
 /* Without this any HTML using <fieldset> shows ugly borders and has additional padding/margin. (Issue #3) */

@@ -80,15 +80,12 @@ header p {
 /* Format navigation */
 nav {
   font-size: 1rem;
-  white-space: nowrap;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
   line-height: 2;
   padding: 1rem 0;
 }
 
 nav a {
-  margin: 0 1rem 0 0;
+  margin: 1rem 1rem 0 0;
   border: 1px solid var(--border);
   border-radius: 5px;
   color: var(--text) !important;

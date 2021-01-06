@@ -4,23 +4,24 @@ on:
   push
 
 jobs:
-  runs-on: ubuntu-latest
-  steps:
-  - uses: actions/checkout@v2
+  minify:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
 
-  - name: Auto Minify
-    uses: nizarmah/auto-minify@master
+    - name: Auto Minify
+      uses: nizarmah/auto-minify@master
 
-  # Auto commits minified files to the repository
-  # Ignore it if you don't want to commit the files to the repository
-  - name: Auto committing minified files
-    uses: stefanzweifel/git-auto-commit-action@v3.0.0
+    # Auto commits minified files to the repository
+    # Ignore it if you don't want to commit the files to the repository
+    - name: Auto committing minified files
+      uses: stefanzweifel/git-auto-commit-action@v3.0.0
+      with:
+        commit_message: "Github Action: Auto Minified JS and CSS files"
+        branch: ${{ github.ref }}
+
+    uses: ayeressian/bunnycdn-storage-deploy@master
     with:
-      commit_message: "Github Action: Auto Minified JS and CSS files"
-      branch: ${{ github.ref }}
-
-  uses: ayeressian/bunnycdn-storage-deploy@master
-  with:
-    source: "dist"
-    storageZoneName: "simple-css"
-    accessKey: "${{ secrets.bunny_api_key }}"
+      source: "dist"
+      storageZoneName: "simple-css"
+      accessKey: "${{ secrets.bunny_api_key }}"

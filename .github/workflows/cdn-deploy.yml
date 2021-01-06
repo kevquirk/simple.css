@@ -1,5 +1,11 @@
-- name: Minify & Deploy to BunnyCDN
-  # Checks-out your repository under $GITHUB_WORKSPACE, so auto-minify job can access it
+name: Minify & Deploy to CDN
+
+on:
+  push
+
+jobs:
+  runs-on: ubuntu-latest
+  steps:
   - uses: actions/checkout@v2
 
   - name: Auto Minify
@@ -12,7 +18,7 @@
     with:
       commit_message: "Github Action: Auto Minified JS and CSS files"
       branch: ${{ github.ref }}
-      
+
   uses: ayeressian/bunnycdn-storage-deploy@master
   with:
     source: "dist"

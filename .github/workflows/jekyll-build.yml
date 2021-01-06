@@ -1,32 +1,20 @@
-name: Jekyll Build & Deploy
+- name: Minify & Deploy to BunnyCDN
+  # Checks-out your repository under $GITHUB_WORKSPACE, so auto-minify job can access it
+  - uses: actions/checkout@v2
 
-on:
-  push
+  - name: Auto Minify
+    uses: nizarmah/auto-minify@master
 
-jobs:
-  jekyll:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-
-    # Use GitHub Actions' cache to shorten build times and decrease load on servers
-    - uses: actions/cache@v1
-      with:
-        path: vendor/bundle
-        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-gems-
-
-    # Standard usage
-    - uses:  lemonarc/jekyll-action@1.0.0
-
-    # FTP files to server
-    - name: Upload ftp
-      uses: sebastianpopp/ftp-action@releases/v2
-      with:
-        host: vibrant-cori.109-228-39-25.plesk.page
-        user: github
-        password: ${{ secrets.ftp_password }}
-        localDir: "./_site"
-        remoteDir: "/simplecss.org"
-        forceSsl: true
+  # Auto commits minified files to the repository
+  # Ignore it if you don't want to commit the files to the repository
+  - name: Auto committing minified files
+    uses: stefanzweifel/git-auto-commit-action@v3.0.0
+    with:
+      commit_message: "Github Action: Auto Minified JS and CSS files"
+      branch: ${{ github.ref }}
+      
+  uses: ayeressian/bunnycdn-storage-deploy@master
+  with:
+    source: "dist"
+    storageZoneName: "simple-css"
+    accessKey: "${{ secrets.bunny_api_key }}"

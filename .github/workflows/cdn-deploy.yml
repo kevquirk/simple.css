@@ -29,4 +29,3 @@ jobs:
         password: ${{ secrets.bunny_api_key }}
         localDir: "/"
         remoteDir: "/"
-        forceSsl: true

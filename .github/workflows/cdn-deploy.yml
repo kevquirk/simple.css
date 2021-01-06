@@ -20,8 +20,8 @@ jobs:
         commit_message: "Github Action: Auto Minified JS and CSS files"
         branch: ${{ github.ref }}
 
-    uses: ayeressian/bunnycdn-storage-deploy@master
-    with:
-      source: "dist"
-      storageZoneName: "simple-css"
-      accessKey: "${{ secrets.bunny_api_key }}"
+    - uses: ayeressian/bunnycdn-storage-deploy@master
+      with:
+        source: "dist"
+        storageZoneName: "simple-css"
+        accessKey: "${{ secrets.bunny_api_key }}"

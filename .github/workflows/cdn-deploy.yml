@@ -27,5 +27,4 @@ jobs:
         host: storage.bunnycdn.com
         user: simple-css
         password: ${{ secrets.bunny_api_key }}
-        localDir: "/"
-        remoteDir: "/"
+        localDir: "./simple.min.css"

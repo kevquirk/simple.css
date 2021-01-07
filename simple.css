@@ -37,6 +37,7 @@
 * {
   /* Set the font globally */
   font-family: var(--sans-font);
+  box-sizing: border-box;
 }
 
 /* Make the body a nice central block */
@@ -152,6 +153,7 @@ a:hover {
 
 a button,
 button,
+a[as=button],
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
@@ -163,10 +165,15 @@ input[type="button"] {
   padding: .7rem .9rem;
   margin: .5rem 0;
   transition: .4s;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  line-height: normal;
 }
 
 a button[disabled],
 button[disabled],
+a[as=button][disabled],
 input[type="submit"][disabled],
 input[type="reset"][disabled],
 input[type="button"][disabled] {
@@ -177,6 +184,7 @@ input[type="button"][disabled] {
 
 button:focus,
 button:enabled:hover,
+a[as=button]:hover,
 input[type="submit"]:focus,
 input[type="submit"]:enabled:hover,
 input[type="reset"]:focus,

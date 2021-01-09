@@ -268,12 +268,87 @@ textarea {
   width: 80%
 }
 
+/* Hide checkboxs by default */
+input[type=checkbox]{
+  display: none;
+}
+
+/* Show the menu when invisible checkbox is checked */
+header input[type=checkbox]:checked ~ nav {
+  display: block;
+}
+
 /* Makes input fields wider on smaller screens */
 @media only screen and (max-width: 720px) {
   textarea,
   select,
   input {
     width: 100%;
+  }
+
+  /* Hide menu by default on small screens */
+  nav {
+    display: none;
+    padding: .1rem 0;
+  }
+
+  /* Displays menu buttons as a list */
+  nav a {
+    display: block;
+  }
+
+  header label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+  }
+  
+  header label span {
+    background: var(--accent);
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+  }
+  
+  header label span:before,
+  header label span:after {
+    background: var(--accent);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+  
+  header label span:before {
+    top: 5px;
+  }
+  
+  header label span:after {
+    top: -5px;
+  }
+
+  /* Just a cool effect to turn the [=] in to a [x] */
+  header input[type=checkbox]:checked ~ label span {
+    background: transparent;
+  }
+  
+  header input[type=checkbox]:checked ~ label span:before {
+    transform: rotate(-45deg);
+  }
+  
+  header input[type=checkbox]:checked ~ label span:after {
+    transform: rotate(45deg);
+  }
+  
+  header input[type=checkbox]:checked ~ label:not(.steps) span:before,
+  header input[type=checkbox]:checked ~ label:not(.steps) span:after {
+    top: 0;
   }
 }
 

@@ -5,12 +5,17 @@
   --sans-font: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir, "Nimbus Sans L", Roboto, Noto, "Segoe UI", Arial, Helvetica, "Helvetica Neue", sans-serif;
   --mono-font: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
 
-  --base-fontsize: 18.4px;
-  --header-scale: 1.2; /* Minor third */
-  --line-height: 1.618; /* Golden ratio */
+  /* Body font size. By default, effectively 18.4px, based on 16px as 'root em' */
+  --base-fontsize: 1.15rem;
+
+  /* Major third scale progression - see https://type-scale.com/ */
+  --header-scale: 1.25;
+
+  /* Line height is set to the "Golden ratio" for optimal legibility */
+  --line-height: 1.618;
 
   /* Default (light) theme */
-  --bg: #fff;
+  --bg: #FFF;
   --accent-bg: #F5F7FF;
   --text: #212121;
   --text-light: #666;
@@ -43,6 +48,9 @@
   font-family: var(--sans-font);
 }
 
+html {
+  font-size: 16px;
+}
 
 /* Make the body a nice central block */
 body {

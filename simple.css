@@ -18,7 +18,7 @@
   --bg: #FFF;
   --accent-bg: #F5F7FF;
   --text: #212121;
-  --text-light: #666;
+  --text-light: #585858;
   --border: #D8DAE1;
   --accent: #0D47A1;
   --accent-light: #90CAF9;
@@ -29,9 +29,9 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: #212121;
-    --accent-bg: #2b2b2b;
-    --text: #ababab;
-    --text-light: #808080;
+    --accent-bg: #2B2B2B;
+    --text: #DCDCDC;
+    --text-light: #ABABAB;
     --border: #666;
     --accent: #FFB300;
     --accent-light: #FFECB3;

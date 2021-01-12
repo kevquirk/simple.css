@@ -5,8 +5,17 @@
   --sans-font: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir, "Nimbus Sans L", Roboto, Noto, "Segoe UI", Arial, Helvetica, "Helvetica Neue", sans-serif;
   --mono-font: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
 
+  /* Body font size. By default, effectively 18.4px, based on 16px as 'root em' */
+  --base-fontsize: 1.15rem;
+
+  /* Major third scale progression - see https://type-scale.com/ */
+  --header-scale: 1.25;
+
+  /* Line height is set to the "Golden ratio" for optimal legibility */
+  --line-height: 1.618;
+
   /* Default (light) theme */
-  --bg: #fff;
+  --bg: #FFF;
   --accent-bg: #F5F7FF;
   --text: #212121;
   --text-light: #666;
@@ -39,12 +48,16 @@
   font-family: var(--sans-font);
 }
 
+html {
+  font-size: 16px;
+}
+
 /* Make the body a nice central block */
 body {
   color: var(--text);
   background: var(--bg);
-  font-size: 1.15rem;
-  line-height: 1.5;
+  font-size: var(--base-fontsize);
+  line-height: var(--line-height);
   margin: 0;
 }
 
@@ -115,29 +128,33 @@ footer {
 
 /* Format headers */
 h1 {
-	font-size: 2.25rem;
+  font-size: calc(var(--base-fontsize) * var(--header-scale) * var(--header-scale) * var(--header-scale) * var(--header-scale));
+  margin-top: calc(var(--line-height) * 1.5rem);
 }
 
 h2 {
-	font-size: 1.85rem;
-  margin-top: 3rem;
+  font-size: calc(var(--base-fontsize) * var(--header-scale) * var(--header-scale) * var(--header-scale));
+  margin-top: calc(var(--line-height) * 1.5rem);
 }
 
 h3 {
-	font-size: 1.55rem;
-  margin-top: 3rem;
+  font-size: calc(var(--base-fontsize) * var(--header-scale) * var(--header-scale));
+  margin-top: calc(var(--line-height) * 1.5rem);
 }
 
 h4 {
-	font-size: 1.25rem;
+  font-size: calc(var(--base-fontsize) * var(--header-scale));
+  margin-top: calc(var(--line-height) * 1.5rem);
 }
 
 h5 {
-	font-size: 1.15rem;
+  font-size: var(--base-fontsize);
+  margin-top: calc(var(--line-height) * 1.5rem);
 }
 
 h6 {
-	font-size: .9rem;
+  font-size: calc(var(--base-fontsize) / var(--header-scale));
+  margin-top: calc(var(--line-height) * 1.5rem);
 }
 
 /* Format links & buttons */

@@ -355,7 +355,6 @@ pre,
 kbd,
 samp {
 	font-family: var(--mono-font);
-  font-size: 1.1rem;
   color: var(--code);
 }
 

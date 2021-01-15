@@ -63,8 +63,7 @@ body {
 
 /* Make the main element a nice central block */
 main {
-  margin: 0 auto;
-  margin-top: 1rem;
+  margin: 1rem auto 0;
   max-width: 45rem;
   padding: 0 .5rem;
 }

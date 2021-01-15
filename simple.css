@@ -196,6 +196,11 @@ input[type="button"][disabled] {
 	cursor: not-allowed;
 }
 
+/* Set the cursor to '?' while hovering over an abbreviation */
+abbr:hover {
+    cursor: help;
+}
+
 button:focus,
 button:enabled:hover,
 input[type="submit"]:focus,

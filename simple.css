@@ -23,8 +23,8 @@
   --accent: #0D47A1;
   --accent-light: #90CAF9;
   --code: #D81B60;
-  --preformatted: #666;
-  --marked: #FDB833;	
+  --preformatted: #444;
+  --marked: #FFDD33;
 }
 
 /* Dark theme */
@@ -38,6 +38,8 @@
     --accent: #FFB300;
     --accent-light: #FFECB3;
     --code: #F06292;
+    --preformatted: #CCC;
+    --marked: #7A6C28;
   }
 
   img {
@@ -328,6 +330,7 @@ mark {
     padding: 2px 5px;
     border-radius: 4px;
     background: var(--marked);
+    color: var(--text);
 }
 
 main img {
@@ -365,7 +368,7 @@ code,
 pre,
 kbd,
 samp {
-    font-size: 1.0rem;
+    font-size: 1.075rem;
     font-family: var(--mono-font);
     color: var(--code);
 }
@@ -390,7 +393,7 @@ pre {
 
 /* Fix embedded code within pre */
 pre code {
-    color: var(--text);
+    color: var(--preformatted);
     background: none;
     margin: 0;
     padding: 0;

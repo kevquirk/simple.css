@@ -39,7 +39,6 @@
     --accent-light: #FFECB3;
     --code: #F06292;
     --preformatted: #CCC;
-    --marked: #7A6C28;
   }
 
   img {
@@ -330,7 +329,6 @@ mark {
     padding: 2px 5px;
     border-radius: 4px;
     background: var(--marked);
-    color: var(--text);
 }
 
 main img {

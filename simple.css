@@ -93,6 +93,11 @@ header p {
   margin: 0;
 }
 
+/* Fix header line height when title wraps */
+header h1 {
+  line-height: 1.1;
+}
+
 /* Format navigation */
 nav {
   font-size: 1rem;

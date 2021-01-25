@@ -23,6 +23,8 @@
   --accent: #0D47A1;
   --accent-light: #90CAF9;
   --code: #D81B60;
+  --preformatted: #444;
+  --marked: #FFDD33;
 }
 
 /* Dark theme */
@@ -36,6 +38,7 @@
     --accent: #FFB300;
     --accent-light: #FFECB3;
     --code: #F06292;
+    --preformatted: #CCC;
   }
 
   img {
@@ -328,8 +331,9 @@ hr {
 }
 
 mark {
-	padding: 3px 6px;
-	background: var(--accent-light);
+    padding: 2px 5px;
+    border-radius: 4px;
+    background: var(--marked);
 }
 
 main img {
@@ -367,29 +371,32 @@ code,
 pre,
 kbd,
 samp {
-	font-family: var(--mono-font);
-  color: var(--code);
+    font-size: 1.075rem;
+    font-family: var(--mono-font);
+    color: var(--code);
 }
 
 kbd {
-  border: 1px solid var(--code);
-	border-bottom: 3px solid var(--code);
-  border-radius: 5px;
-  padding: .1rem;
+    color: var(--preformatted);
+    border: 1px solid var(--preformatted);
+    border-bottom: 3px solid var(--preformatted);
+    border-radius: 5px;
+    padding: .1rem;
 }
 
 pre {
-	padding: 1rem 1.4rem;
-	max-width: 100%;
-	overflow: auto;
-  background: var(--accent-bg);
-  border: 1px solid var(--border);
-  border-radius: 5px;
+    padding: 1rem 1.4rem;
+    max-width: 100%;
+    overflow: auto;
+    color: var(--preformatted);
+    background: var(--accent-bg);
+    border: 1px solid var(--border);
+    border-radius: 5px;
 }
 
 /* Fix embedded code within pre */
 pre code {
-    color: var(--text);
+    color: var(--preformatted);
     background: none;
     margin: 0;
     padding: 0;

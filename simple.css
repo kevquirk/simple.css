@@ -315,6 +315,11 @@ input[type="checkbox"], input[type="radio"]{
   width: auto;
 }
 
+/* do not show border around file selector button */
+input[type="file"] {
+  border: 0;
+}
+
 /* Without this any HTML using <fieldset> shows ugly borders and has additional padding/margin. (Issue #3) */
 fieldset {
   border: 0;

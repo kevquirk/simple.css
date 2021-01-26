@@ -41,7 +41,7 @@
     --preformatted: #CCC;
   }
 
-  img {
+  img, video {
     opacity: .6;
   }
 }
@@ -336,7 +336,7 @@ mark {
     background: var(--marked);
 }
 
-main img {
+main img, main video {
   max-width: 100%;
   border-radius: 5px;
 }

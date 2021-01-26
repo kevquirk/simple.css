@@ -2,9 +2,10 @@
   "name": "@kevquirk/simple.css",
   "version": "1.0.0",
   "description": "Simple.css is a classless CSS template that allows you to make a good looking website really quickly.",
-  "main": "simple.css",
+  "main": "simple.min.css",
   "files": [
-    "simple.css"
+    "simple.css",
+    "simple.min.css"
   ],
   "repository": {
     "type": "git",

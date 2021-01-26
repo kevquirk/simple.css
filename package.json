@@ -5,7 +5,7 @@
   "main": "simple.css",
   "files": [
     "simple.css"
-  },
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kevquirk/simple.css.git"

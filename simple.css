@@ -25,6 +25,7 @@
   --code: #D81B60;
   --preformatted: #444;
   --marked: #FFDD33;
+  --disabled: #EFEFEF;
 }
 
 /* Dark theme */
@@ -39,6 +40,7 @@
     --accent-light: #FFECB3;
     --code: #F06292;
     --preformatted: #CCC;
+    --disabled: #111;
   }
 
   img, video {
@@ -203,6 +205,11 @@ input[type="button"][disabled] {
 	cursor: not-allowed;
 }
 
+input:disabled {
+  cursor: not-allowed;
+  background: var(--disabled);
+}
+
 /* Set the cursor to '?' while hovering over an abbreviation */
 abbr {
     cursor: help;
@@ -294,6 +301,9 @@ input {
 	box-shadow: none;
 	box-sizing: border-box;
   width: 60%;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
 }
 
 /* Make the textarea wider than other inputs */

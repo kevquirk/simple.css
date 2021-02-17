@@ -211,6 +211,10 @@ textarea:disabled {
   background: var(--disabled);
 }
 
+input[type="range"] {
+  padding: 0;
+}
+
 /* Set the cursor to '?' while hovering over an abbreviation */
 abbr {
     cursor: help;

@@ -205,7 +205,8 @@ input[type="button"][disabled] {
 	cursor: not-allowed;
 }
 
-input:disabled {
+input:disabled,
+textarea:disabled {
   cursor: not-allowed;
   background: var(--disabled);
 }

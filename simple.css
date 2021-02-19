@@ -389,6 +389,7 @@ cite {
 /* Use mono font for code like elements */
 code,
 pre,
+pre span,
 kbd,
 samp {
     font-size: 1.075rem;

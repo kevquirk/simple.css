@@ -48,7 +48,7 @@
   }
 }
 
-* {
+html {
   /* Set the font globally */
   font-family: var(--sans-font);
 }

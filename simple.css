@@ -51,9 +51,6 @@
 html {
   /* Set the font globally */
   font-family: var(--sans-font);
-}
-
-html {
   font-size: 16px;
 }
 

@@ -196,16 +196,20 @@ a button[disabled],
 button[disabled],
 input[type="submit"][disabled],
 input[type="reset"][disabled],
-input[type="button"][disabled] {
+input[type="button"][disabled],
+input[type="checkbox"][disabled],
+input[type="radio"][disabled],
+select[disabled] {
 	cursor: default;
 	opacity: .5;
 	cursor: not-allowed;
 }
 
 input:disabled,
-textarea:disabled {
+textarea:disabled,
+select:disabled {
   cursor: not-allowed;
-  background: var(--disabled);
+  background-color: var(--disabled);
 }
 
 input[type="range"] {
@@ -310,6 +314,20 @@ input {
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
+}
+
+/* Add arrow to select */
+select {
+  background-image:
+    linear-gradient(45deg, transparent 49%, var(--text) 51%),
+    linear-gradient(135deg, var(--text) 51%, transparent 49%);
+  background-position:
+    calc(100% - 20px), 
+    calc(100% - 15px);
+  background-size:
+    5px 5px,
+    5px 5px;
+  background-repeat: no-repeat;
 }
 
 /* checkbox and radio button style */

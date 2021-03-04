@@ -196,16 +196,20 @@ a button[disabled],
 button[disabled],
 input[type="submit"][disabled],
 input[type="reset"][disabled],
-input[type="button"][disabled] {
+input[type="button"][disabled],
+input[type="checkbox"][disabled],
+input[type="radio"][disabled],
+select[disabled] {
 	cursor: default;
 	opacity: .5;
 	cursor: not-allowed;
 }
 
 input:disabled,
-textarea:disabled {
+textarea:disabled,
+select:disabled {
   cursor: not-allowed;
-  background: var(--disabled);
+  background-color: var(--disabled);
 }
 
 input[type="range"] {
@@ -224,8 +228,12 @@ input[type="submit"]:enabled:hover,
 input[type="reset"]:focus,
 input[type="reset"]:enabled:hover,
 input[type="button"]:focus,
-input[type="button"]:enabled:hover {
-	opacity: .8;
+input[type="button"]:enabled:hover,
+input[type="checkbox"]:focus,
+input[type="checkbox"]:enabled:hover,
+input[type="radio"]:focus,
+input[type="radio"]:enabled:hover{
+    opacity: .8;
 }
 
 /* Format the expanding box */
@@ -306,6 +314,62 @@ input {
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
+}
+
+/* Add arrow to select */
+select {
+  background-image:
+    linear-gradient(45deg, transparent 49%, var(--text) 51%),
+    linear-gradient(135deg, var(--text) 51%, transparent 49%);
+  background-position:
+    calc(100% - 20px), 
+    calc(100% - 15px);
+  background-size:
+    5px 5px,
+    5px 5px;
+  background-repeat: no-repeat;
+}
+
+/* checkbox and radio button style */
+input[type="checkbox"], input[type="radio"]{
+  vertical-align: bottom;
+  position: relative;
+}
+input[type="radio"]{
+  border-radius: 100%;
+}
+
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+  background: var(--accent);
+}
+
+input[type="checkbox"]:checked::after {
+  /* Creates a rectangle with colored right and bottom borders which is rotated to look like a check mark */
+  content: ' ';
+  width: 0.1em;
+  height: 0.25em;
+  border-radius: 0;
+  position: absolute;
+  top: 0.05em;
+  left: 0.18em;
+  background: transparent;
+  border-right: solid var(--bg) 0.08em;
+  border-bottom: solid var(--bg) 0.08em;
+  font-size: 1.8em;
+  transform: rotate(45deg);
+}
+input[type="radio"]:checked::after {
+  /* creates a colored circle for the checked radio button  */
+  content: ' ';
+  width: .25em;
+  height: .25em;
+  border-radius: 100%;
+  position: absolute;
+  top: 0.125em;
+  background: var(--bg);
+  left: 0.125em;
+  font-size: 32px;
 }
 
 /* Make the textarea wider than other inputs */

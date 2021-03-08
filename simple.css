@@ -61,6 +61,9 @@ body {
   font-size: var(--base-fontsize);
   line-height: var(--line-height);
   margin: 0;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 /* Make the main element a nice central block */
@@ -68,6 +71,7 @@ main {
   margin: 1rem auto 0;
   max-width: 45rem;
   padding: 0 .5rem;
+  flex: 1;
 }
 
 /* Make the header bg full width, but the content inline with body */
@@ -322,7 +326,7 @@ select {
     linear-gradient(45deg, transparent 49%, var(--text) 51%),
     linear-gradient(135deg, var(--text) 51%, transparent 49%);
   background-position:
-    calc(100% - 20px), 
+    calc(100% - 20px),
     calc(100% - 15px);
   background-size:
     5px 5px,

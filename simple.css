@@ -473,6 +473,7 @@ kbd {
 
 pre {
     padding: 1rem 1.4rem;
+    max-width: 100%;
     color: var(--preformatted);
     background: var(--accent-bg);
     border: 1px solid var(--border);

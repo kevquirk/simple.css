@@ -477,6 +477,8 @@ pre {
     background: var(--accent-bg);
     border: 1px solid var(--border);
     border-radius: 5px;
+    white-space: pre-wrap;
+    word-break: keep-all;
 }
 
 /* Fix embedded code within pre */

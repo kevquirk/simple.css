@@ -473,13 +473,13 @@ kbd {
 
 pre {
     padding: 1rem 1.4rem;
+    max-width: 100%;
+    overflow: auto;
+    overflow-x: auto;
     color: var(--preformatted);
     background: var(--accent-bg);
     border: 1px solid var(--border);
     border-radius: 5px;
-    white-space: pre-wrap;
-    word-break: keep-all;
-    overflow-x: auto;
 }
 
 /* Fix embedded code within pre */

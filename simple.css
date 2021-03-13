@@ -479,6 +479,7 @@ pre {
     border-radius: 5px;
     white-space: pre-wrap;
     word-break: keep-all;
+    overflow-x: auto;
 }
 
 /* Fix embedded code within pre */

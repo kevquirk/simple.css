@@ -60,38 +60,32 @@ body {
   background: var(--bg);
   font-size: var(--base-fontsize);
   line-height: var(--line-height);
-  margin: 0;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-}
-
-/* Make the main element a nice central block */
-main {
-  margin: 1rem auto 0;
+  flex: 1;
+  margin: 0 auto;
   max-width: 45rem;
   padding: 0 .5rem;
-  flex: 1;
+  overflow-x: hidden;
+	word-break: break-word;
+	overflow-wrap: break-word;
 }
 
 /* Make the header bg full width, but the content inline with body */
 header {
 	background: var(--accent-bg);
 	border-bottom: 1px solid var(--border);
-  padding: 1.5rem 15rem;
-  margin-bottom: 3rem;
+  text-align: center;
+  padding: 2rem .5rem;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
 
-/* Reduces header padding on smaller screens */
-@media only screen and (max-width: 1200px) {
-  header {
-    padding: 1rem;
-  }
-
-  nav {
-    text-align: center;
-  }
-}
 
 /* Remove margins for header text */
 header h1,

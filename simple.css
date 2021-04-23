@@ -68,14 +68,14 @@ body {
   max-width: 45rem;
   padding: 0 .5rem;
   overflow-x: hidden;
-	word-break: break-word;
-	overflow-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 /* Make the header bg full width, but the content inline with body */
 header {
-	background: var(--accent-bg);
-	border-bottom: 1px solid var(--border);
+  background: var(--accent-bg);
+  border-bottom: 1px solid var(--border);
   text-align: center;
   padding: 2rem .5rem;
   width: 100vw;
@@ -198,9 +198,9 @@ input[type="button"][disabled],
 input[type="checkbox"][disabled],
 input[type="radio"][disabled],
 select[disabled] {
-	cursor: default;
-	opacity: .5;
-	cursor: not-allowed;
+  cursor: default;
+  opacity: .5;
+  cursor: not-allowed;
 }
 
 input:disabled,
@@ -216,7 +216,7 @@ input[type="range"] {
 
 /* Set the cursor to '?' while hovering over an abbreviation */
 abbr {
-    cursor: help;
+  cursor: help;
 }
 
 button:focus,
@@ -231,68 +231,68 @@ input[type="checkbox"]:focus,
 input[type="checkbox"]:enabled:hover,
 input[type="radio"]:focus,
 input[type="radio"]:enabled:hover{
-    opacity: .8;
+  opacity: .8;
 }
 
 /* Format the expanding box */
 details {
-	padding: .6rem 1rem;
-	background: var(--accent-bg);
-	border: 1px solid var(--border);
-	border-radius: 5px;
+  padding: .6rem 1rem;
+  background: var(--accent-bg);
+  border: 1px solid var(--border);
+  border-radius: 5px;
   margin-bottom: 1rem;
 }
 
 summary {
-	cursor: pointer;
-	font-weight: bold;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 details[open] {
-	padding-bottom: .75rem;
+  padding-bottom: .75rem;
 }
 
 details[open] summary {
-	margin-bottom: .5rem;
+  margin-bottom: .5rem;
 }
 
 details[open]>*:last-child {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 /* Format tables */
 table {
-	border-collapse: collapse;
-	width: 100%;
-  	margin: 1.5rem 0;
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5rem 0;
 }
 
 td,
 th {
-	border: 1px solid var(--border);
-	text-align: left;
-	padding: .5rem;
+  border: 1px solid var(--border);
+  text-align: left;
+  padding: .5rem;
 }
 
 th {
-	background: var(--accent-bg);
+  background: var(--accent-bg);
   font-weight: bold;
 }
 
 tr:nth-child(even) {
-	/* Set every other cell slightly darker. Improves readability. */
-	background: var(--accent-bg);
+  /* Set every other cell slightly darker. Improves readability. */
+  background: var(--accent-bg);
 }
 
 table caption {
-	font-weight: bold;
-	margin-bottom: .5rem;
+  font-weight: bold;
+  margin-bottom: .5rem;
 }
 
 /* Lists */
 ol,
 ul {
-	padding-left: 3rem;
+  padding-left: 3rem;
 }
 
 /* Format forms */
@@ -301,14 +301,14 @@ select,
 input {
   font-size: inherit;
   font-family: inherit;
-	padding: .5rem;
-	margin-bottom: .5rem;
+  padding: .5rem;
+  margin-bottom: .5rem;
   color: var(--text);
-	background: var(--bg);
-	border: 1px solid var(--border);
-	border-radius: 5px;
-	box-shadow: none;
-	box-sizing: border-box;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  box-shadow: none;
+  box-sizing: border-box;
   width: 60%;
   appearance: none;
   -moz-appearance: none;
@@ -405,15 +405,15 @@ fieldset {
 /* Misc body elements */
 
 hr {
-	color: var(--border);
+  color: var(--border);
   border-top: 1px;
-	margin: 1rem auto;
+  margin: 1rem auto;
 }
 
 mark {
-    padding: 2px 5px;
-    border-radius: 4px;
-    background: var(--marked);
+  padding: 2px 5px;
+  border-radius: 4px;
+  background: var(--marked);
 }
 
 main img, main video {
@@ -435,9 +435,9 @@ figcaption {
 blockquote {
   margin: 2rem 0 2rem 2rem;
   padding: .4rem .8rem;
-	border-left: .35rem solid var(--accent);
-	opacity: .8;
-	font-style: italic;
+  border-left: .35rem solid var(--accent);
+  opacity: .8;
+  font-style: italic;
 }
 
 cite {
@@ -452,34 +452,34 @@ pre,
 pre span,
 kbd,
 samp {
-    font-size: 1.075rem;
-    font-family: var(--mono-font);
-    color: var(--code);
+  font-size: 1.075rem;
+  font-family: var(--mono-font);
+  color: var(--code);
 }
 
 kbd {
-    color: var(--preformatted);
-    border: 1px solid var(--preformatted);
-    border-bottom: 3px solid var(--preformatted);
-    border-radius: 5px;
-    padding: .1rem;
+  color: var(--preformatted);
+  border: 1px solid var(--preformatted);
+  border-bottom: 3px solid var(--preformatted);
+  border-radius: 5px;
+  padding: .1rem;
 }
 
 pre {
-    padding: 1rem 1.4rem;
-    max-width: 100%;
-    overflow: auto;
-    overflow-x: auto;
-    color: var(--preformatted);
-    background: var(--accent-bg);
-    border: 1px solid var(--border);
-    border-radius: 5px;
+  padding: 1rem 1.4rem;
+  max-width: 100%;
+  overflow: auto;
+  overflow-x: auto;
+  color: var(--preformatted);
+  background: var(--accent-bg);
+  border: 1px solid var(--border);
+  border-radius: 5px;
 }
 
 /* Fix embedded code within pre */
 pre code {
-    color: var(--preformatted);
-    background: none;
-    margin: 0;
-    padding: 0;
+  color: var(--preformatted);
+  background: none;
+  margin: 0;
+  padding: 0;
 }

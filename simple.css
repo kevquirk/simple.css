@@ -22,7 +22,7 @@
   --border: #D8DAE1;
   --accent: #0D47A1;
   --accent-light: #90CAF9;
-  --code: #D81B60;
+  --code: #D81B60;Te
   --preformatted: #444;
   --marked: #FFDD33;
   --disabled: #EFEFEF;
@@ -311,9 +311,9 @@ input {
   box-shadow: none;
   box-sizing: border-box;
   width: 60%;
-  appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
+  appearance: none;
 }
 
 /* Add arrow to select */

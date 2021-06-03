@@ -311,9 +311,9 @@ input {
   box-shadow: none;
   box-sizing: border-box;
   width: 60%;
-  appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
+  appearance: none;
 }
 
 /* Add arrow to select */

@@ -1,0 +1,581 @@
+/* See 'https://github.com/chowderman/simple.css' for SASS source code for */
+/* building this style sheet */
+
+/* Theme variable will be set at runtime in the 'index.js' file. See that file */
+/* for more information on the available themes. If not available, uncomment */
+/* the one of the below theme variables. */
+/* $theme: 'light'; */
+/* $theme: 'dark'; */
+/* $theme: 'combined'; */
+
+/* Set sans-serif & mono fonts */
+$sans-font: '-apple-system, BlinkMacSystemFont, "Avenir Next", Avenir, "Nimbus Sans L", Roboto, Noto, "Segoe UI", Arial, Helvetica, "Helvetica Neue", sans-serif';
+$mono-font: 'Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace';
+
+/* Body font size. By default, effectively 18.4px, based on 16px as 'root em' */
+$base-fontsize: 1.15rem;
+
+/* Major third scale progression - see https://type-scale.com/ */
+$header-scale: 1.25;
+
+/* Line height is set to the "Golden ratio" for optimal legibility */
+$line-height: 1.618;
+
+/* Empty global variables that will be modified based on the CSS theme chosen */
+$bg: null;
+$accent-bg: null;
+$text: null;
+$text-light: null;
+$border: null;
+$accent: null;
+$accent-light: null;
+$code: null;
+$preformatted: null;
+$marked: null;
+$disabled: null;
+
+/* Light theme variables */
+$light-bg: #FFFFFF;
+$light-accent-bg: #F5F7FF;
+$light-text: #212121;
+$light-text-light: #585858;
+$light-border: #D8DAE1;
+$light-accent: #0D47A1;
+$light-accent-light: #90CAF9;
+$light-code: #D81B60;
+$light-preformatted: #444444;
+$light-marked: #FFDD33;
+$light-disabled: #EFEFEF;
+
+/* Dark theme variables */
+$dark-bg: #212121;
+$dark-accent-bg: #2B2B2B;
+$dark-text: #DCDCDC;
+$dark-text-light: #ABABAB;
+$dark-border: #666666;
+$dark-accent: #FFB300;
+$dark-accent-light: #FFECB3;
+$dark-code: #F06292;
+$dark-preformatted: #CCCCCC;
+$dark-disabled: #111111;
+
+/* Setting variables to Light theme if chosen */
+@if $theme == 'light' {
+  $bg: $light-bg;
+  $accent-bg: $light-accent-bg;
+  $text: $light-text;
+  $text-light: $light-text-light;
+  $border: $light-border;
+  $accent: $light-accent;
+  $accent-light: $light-accent-light;
+  $code: $light-code;
+  $preformatted: $light-preformatted;
+  $marked: $light-marked;
+  $disabled: $light-disabled;
+}
+
+/* Setting variables to Dark theme if chosen */
+@if $theme == 'dark' {
+  $bg: $dark-bg;
+  $accent-bg: $dark-accent-bg;
+  $text: $dark-text;
+  $text-light: $dark-text-light;
+  $border: $dark-border;
+  $accent: $dark-accent;
+  $accent-light: $dark-accent-light;
+  $code: $dark-code;
+  $preformatted: $dark-preformatted;
+  $disabled: $dark-disabled;
+}
+
+/* Setting variables to use CSS variables if Combined theme is chosen (allowing */
+/* the user to pick either dark or light theme if dark preferred color scheme is */
+/* is chosen */
+@if $theme == 'combined' {
+  /* Set the global variables for everything. Change these to use your own fonts/colours. */
+  :root {
+    /* Light theme (default) */
+    --bg: #{$light-bg};
+    --accent-bg: #{$light-accent-bg};
+    --text: #{$light-text};
+    --text-light: #{$light-text-light};
+    --border: #{$light-border};
+    --accent: #{$light-accent};
+    --accent-light: #{$light-accent-light};
+    --code: #{$light-code};
+    --preformatted: #{$light-preformatted};
+    --marked: #{$light-marked};
+    --disabled: #{$light-disabled};
+  }
+
+  /* Dark theme */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #{$dark-bg};
+      --accent-bg: #{$dark-accent-bg};
+      --text: #{$dark-text};
+      --text-light: #{$dark-text-light};
+      --border: #{$dark-border};
+      --accent: #{$dark-accent};
+      --accent-light: #{$dark-accent-light};
+      --code: #{$dark-code};
+      --preformatted: #{$dark-preformatted};
+      --disabled: #{$dark-disabled};
+    }
+
+    img, video {
+      opacity: .6;
+    }
+  }
+
+  /* Setting the global variables to CSS variables */
+  $bg: var(--bg);
+  $accent-bg: var(--accent-bg);
+  $text: var(--text);
+  $text-light: var(--text-light);
+  $border: var(--border);
+  $accent: var(--accent);
+  $accent-light: var(--accent-light);
+  $code: var(--code);
+  $preformatted: var(--preformatted);
+  $marked: var(--marked);
+  $disabled: var(--disabled);
+}
+
+html {
+  /* Set the font globally */
+  font-family: #{$sans-font};
+  font-size: 16px;
+}
+
+/* Make the body a nice central block */
+body {
+  color: $text;
+  background: $bg;
+  font-size: $base-fontsize;
+  line-height: $line-height;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  flex: 1;
+  margin: 0 auto;
+  max-width: 45rem;
+  padding: 0 .5rem;
+  overflow-x: hidden;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Make the header bg full width, but the content inline with body */
+header {
+  background: $accent-bg;
+  border-bottom: 1px solid $border;
+  text-align: center;
+  padding: 2rem .5rem;
+  width: 100vw;
+  position: relative;
+  box-sizing: border-box;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+
+/* Remove margins for header text */
+header h1,
+header p {
+  margin: 0;
+}
+
+/* Fix header line height when title wraps */
+header h1 {
+  line-height: 1.1;
+}
+
+/* Format navigation */
+nav {
+  font-size: 1rem;
+  line-height: 2;
+  padding: 1rem 0;
+}
+
+nav a {
+  margin: 1rem 1rem 0 0;
+  border: 1px solid $border;
+  border-radius: 5px;
+  color: $text !important;
+  display: inline-block;
+  padding: .1rem 1rem;
+  text-decoration: none;
+  transition: .4s;
+}
+
+nav a:hover {
+  color: $accent !important;
+  border-color: $accent;
+}
+
+nav a.current:hover {
+  text-decoration: none;
+}
+
+footer {
+  margin-top: 4rem;
+  padding: 2rem 1rem 1.5rem 1rem;
+  color: $text-light;
+  font-size: .9rem;
+  text-align: center;
+  border-top: 1px solid $border;
+}
+
+/* Format headers */
+h1 {
+  font-size: calc(#{$base-fontsize} * #{$header-scale} * #{$header-scale} * #{$header-scale} * #{$header-scale});
+  margin-top: calc(#{$line-height} * 1.5rem);
+}
+
+h2 {
+  font-size: calc(#{$base-fontsize} * #{$header-scale} * #{$header-scale} * #{$header-scale});
+  margin-top: calc(#{$line-height} * 1.5rem);
+}
+
+h3 {
+  font-size: calc(#{$base-fontsize} * #{$header-scale} * #{$header-scale});
+  margin-top: calc(#{$line-height} * 1.5rem);
+}
+
+h4 {
+  font-size: calc(#{$base-fontsize} * #{$header-scale});
+  margin-top: calc(#{$line-height} * 1.5rem);
+}
+
+h5 {
+  font-size: #{$base-fontsize};
+  margin-top: calc(#{$line-height} * 1.5rem);
+}
+
+h6 {
+  font-size: calc(#{$base-fontsize} / #{$header-scale});
+  margin-top: calc(#{$line-height} * 1.5rem);
+}
+
+/* Format links & buttons */
+a,
+a:visited {
+  color: $accent;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  border: none;
+  border-radius: 5px;
+  background: $accent;
+  font-size: 1rem;
+  color: $bg;
+  padding: .7rem .9rem;
+  margin: .5rem 0;
+  transition: .4s;
+}
+
+a button[disabled],
+button[disabled],
+input[type="submit"][disabled],
+input[type="reset"][disabled],
+input[type="button"][disabled],
+input[type="checkbox"][disabled],
+input[type="radio"][disabled],
+select[disabled] {
+  cursor: default;
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+input:disabled,
+textarea:disabled,
+select:disabled {
+  cursor: not-allowed;
+  background-color: $disabled;
+}
+
+input[type="range"] {
+  padding: 0;
+}
+
+/* Set the cursor to '?' while hovering over an abbreviation */
+abbr {
+  cursor: help;
+}
+
+button:focus,
+button:enabled:hover,
+input[type="submit"]:focus,
+input[type="submit"]:enabled:hover,
+input[type="reset"]:focus,
+input[type="reset"]:enabled:hover,
+input[type="button"]:focus,
+input[type="button"]:enabled:hover,
+input[type="checkbox"]:focus,
+input[type="checkbox"]:enabled:hover,
+input[type="radio"]:focus,
+input[type="radio"]:enabled:hover{
+  opacity: .8;
+}
+
+/* Format the expanding box */
+details {
+  padding: .6rem 1rem;
+  background: $accent-bg;
+  border: 1px solid $border;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+details[open] {
+  padding-bottom: .75rem;
+}
+
+details[open] summary {
+  margin-bottom: .5rem;
+}
+
+details[open]>*:last-child {
+  margin-bottom: 0;
+}
+
+/* Format tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5rem 0;
+}
+
+td,
+th {
+  border: 1px solid $border;
+  text-align: left;
+  padding: .5rem;
+}
+
+th {
+  background: $accent-bg;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  /* Set every other cell slightly darker. Improves readability. */
+  background: $accent-bg;
+}
+
+table caption {
+  font-weight: bold;
+  margin-bottom: .5rem;
+}
+
+/* Lists */
+ol,
+ul {
+  padding-left: 3rem;
+}
+
+/* Format forms */
+textarea,
+select,
+input {
+  font-size: inherit;
+  font-family: inherit;
+  padding: .5rem;
+  margin-bottom: .5rem;
+  color: $text;
+  background: $bg;
+  border: 1px solid $border;
+  border-radius: 5px;
+  box-shadow: none;
+  box-sizing: border-box;
+  width: 60%;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Add arrow to select */
+select {
+  background-image:
+    linear-gradient(45deg, transparent 49%, $text 51%),
+    linear-gradient(135deg, $text 51%, transparent 49%);
+  background-position:
+    calc(100% - 20px),
+    calc(100% - 15px);
+  background-size:
+    5px 5px,
+    5px 5px;
+  background-repeat: no-repeat;
+}
+
+/* checkbox and radio button style */
+input[type="checkbox"], input[type="radio"]{
+  vertical-align: bottom;
+  position: relative;
+}
+input[type="radio"]{
+  border-radius: 100%;
+}
+
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+  background: $accent;
+}
+
+input[type="checkbox"]:checked::after {
+  /* Creates a rectangle with colored right and bottom borders which is rotated to look like a check mark */
+  content: ' ';
+  width: 0.1em;
+  height: 0.25em;
+  border-radius: 0;
+  position: absolute;
+  top: 0.05em;
+  left: 0.18em;
+  background: transparent;
+  border-right: solid $bg 0.08em;
+  border-bottom: solid $bg 0.08em;
+  font-size: 1.8em;
+  transform: rotate(45deg);
+}
+input[type="radio"]:checked::after {
+  /* creates a colored circle for the checked radio button  */
+  content: ' ';
+  width: .25em;
+  height: .25em;
+  border-radius: 100%;
+  position: absolute;
+  top: 0.125em;
+  background: $bg;
+  left: 0.125em;
+  font-size: 32px;
+}
+
+/* Make the textarea wider than other inputs */
+textarea {
+  width: 80%
+}
+
+/* Makes input fields wider on smaller screens */
+@media only screen and (max-width: 720px) {
+  textarea,
+  select,
+  input {
+    width: 100%;
+  }
+}
+
+/* Ensures the checkbox and radio inputs do not have a set width like other input fields */
+input[type="checkbox"], input[type="radio"]{
+  width: auto;
+}
+
+/* do not show border around file selector button */
+input[type="file"] {
+  border: 0;
+}
+
+/* Without this any HTML using <fieldset> shows ugly borders and has additional padding/margin. (Issue #3) */
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+/* Misc body elements */
+
+hr {
+  color: $border;
+  border-top: 1px;
+  margin: 1rem auto;
+}
+
+mark {
+  padding: 2px 5px;
+  border-radius: 4px;
+  background: $marked;
+}
+
+main img, main video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+figure {
+  margin: 0;
+}
+
+figcaption {
+  font-size: .9rem;
+  color: $text-light;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+blockquote {
+  margin: 2rem 0 2rem 2rem;
+  padding: .4rem .8rem;
+  border-left: .35rem solid $accent;
+  opacity: .8;
+  font-style: italic;
+}
+
+cite {
+  font-size: 0.9rem;
+  color: $text-light;
+  font-style: normal;
+}
+
+/* Use mono font for code like elements */
+code,
+pre,
+pre span,
+kbd,
+samp {
+  font-size: 1.075rem;
+  font-family: #{$mono-font};
+  color: $code;
+}
+
+kbd {
+  color: $preformatted;
+  border: 1px solid $preformatted;
+  border-bottom: 3px solid $preformatted;
+  border-radius: 5px;
+  padding: .1rem;
+}
+
+pre {
+  padding: 1rem 1.4rem;
+  max-width: 100%;
+  overflow: auto;
+  overflow-x: auto;
+  color: $preformatted;
+  background: $accent-bg;
+  border: 1px solid $border;
+  border-radius: 5px;
+}
+
+/* Fix embedded code within pre */
+pre code {
+  color: $preformatted;
+  background: none;
+  margin: 0;
+  padding: 0;
+}

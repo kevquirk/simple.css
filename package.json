@@ -1,20 +1,31 @@
 {
   "name": "simpledotcss",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple.css is a classless CSS template that allows you to make a good looking website really quickly.",
   "main": "simple.css",
   "files": [
     "simple.css",
-    "simple.min.css"
+    "simple.min.css",
+    "simple.light.css",
+    "simple.light.min.css",
+    "simple.dark.css",
+    "simple.dark.min.css"
   ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kevquirk/simple.css.git"
   },
-  "author": "kevquirk",
+  "author": [
+    "kevquirk",
+    "ChowderMan"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/kevquirk/simple.css/issues"
   },
-  "homepage": "https://github.com/kevquirk/simple.css#readme"
+  "homepage": "https://github.com/kevquirk/simple.css#readme",
+  "devDependencies": {
+    "clean-css": "5.1.2",
+    "sass": "1.34.1"
+  }
 }

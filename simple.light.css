@@ -18,42 +18,6 @@
 /* Setting variables to use CSS variables if Combined theme is chosen (allowing */
 /* the user to pick either dark or light theme if dark preferred color scheme is */
 /* is chosen */
-/* Set the global variables for everything. Change these to use your own fonts/colours. */
-:root {
-  /* Light theme (default) */
-  --bg: #FFFFFF;
-  --accent-bg: #F5F7FF;
-  --text: #212121;
-  --text-light: #585858;
-  --border: #D8DAE1;
-  --accent: #0D47A1;
-  --accent-light: #90CAF9;
-  --code: #D81B60;
-  --preformatted: #444444;
-  --marked: #FFDD33;
-  --disabled: #EFEFEF;
-}
-
-/* Dark theme */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #212121;
-    --accent-bg: #2B2B2B;
-    --text: #DCDCDC;
-    --text-light: #ABABAB;
-    --border: #666666;
-    --accent: #FFB300;
-    --accent-light: #FFECB3;
-    --code: #F06292;
-    --preformatted: #CCCCCC;
-    --disabled: #111111;
-  }
-
-  img, video {
-    opacity: 0.6;
-  }
-}
-/* Setting the global variables to CSS variables */
 html {
   /* Set the font globally */
   font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir, "Nimbus Sans L", Roboto, Noto, "Segoe UI", Arial, Helvetica, "Helvetica Neue", sans-serif;
@@ -62,8 +26,8 @@ html {
 
 /* Make the body a nice central block */
 body {
-  color: var(--text);
-  background: var(--bg);
+  color: #212121;
+  background: #FFFFFF;
   font-size: 1.15rem;
   line-height: 1.618;
   display: flex;
@@ -80,8 +44,8 @@ body {
 
 /* Make the header bg full width, but the content inline with body */
 header {
-  background: var(--accent-bg);
-  border-bottom: 1px solid var(--border);
+  background: #F5F7FF;
+  border-bottom: 1px solid #D8DAE1;
   text-align: center;
   padding: 2rem 0.5rem;
   width: 100vw;
@@ -113,9 +77,9 @@ nav {
 
 nav a {
   margin: 1rem 1rem 0 0;
-  border: 1px solid var(--border);
+  border: 1px solid #D8DAE1;
   border-radius: 5px;
-  color: var(--text) !important;
+  color: #212121 !important;
   display: inline-block;
   padding: 0.1rem 1rem;
   text-decoration: none;
@@ -123,8 +87,8 @@ nav a {
 }
 
 nav a:hover {
-  color: var(--accent) !important;
-  border-color: var(--accent);
+  color: #0D47A1 !important;
+  border-color: #0D47A1;
 }
 
 nav a.current:hover {
@@ -134,10 +98,10 @@ nav a.current:hover {
 footer {
   margin-top: 4rem;
   padding: 2rem 1rem 1.5rem 1rem;
-  color: var(--text-light);
+  color: #585858;
   font-size: 0.9rem;
   text-align: center;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid #D8DAE1;
 }
 
 /* Format headers */
@@ -174,7 +138,7 @@ h6 {
 /* Format links & buttons */
 a,
 a:visited {
-  color: var(--accent);
+  color: #0D47A1;
 }
 
 a:hover {
@@ -188,9 +152,9 @@ input[type=reset],
 input[type=button] {
   border: none;
   border-radius: 5px;
-  background: var(--accent);
+  background: #0D47A1;
   font-size: 1rem;
-  color: var(--bg);
+  color: #FFFFFF;
   padding: 0.7rem 0.9rem;
   margin: 0.5rem 0;
   transition: 0.4s;
@@ -213,7 +177,7 @@ input:disabled,
 textarea:disabled,
 select:disabled {
   cursor: not-allowed;
-  background-color: var(--disabled);
+  background-color: #EFEFEF;
 }
 
 input[type=range] {
@@ -243,8 +207,8 @@ input[type=radio]:enabled:hover {
 /* Format the expanding box */
 details {
   padding: 0.6rem 1rem;
-  background: var(--accent-bg);
-  border: 1px solid var(--border);
+  background: #F5F7FF;
+  border: 1px solid #D8DAE1;
   border-radius: 5px;
   margin-bottom: 1rem;
 }
@@ -275,19 +239,19 @@ table {
 
 td,
 th {
-  border: 1px solid var(--border);
+  border: 1px solid #D8DAE1;
   text-align: left;
   padding: 0.5rem;
 }
 
 th {
-  background: var(--accent-bg);
+  background: #F5F7FF;
   font-weight: bold;
 }
 
 tr:nth-child(even) {
   /* Set every other cell slightly darker. Improves readability. */
-  background: var(--accent-bg);
+  background: #F5F7FF;
 }
 
 table caption {
@@ -309,9 +273,9 @@ input {
   font-family: inherit;
   padding: 0.5rem;
   margin-bottom: 0.5rem;
-  color: var(--text);
-  background: var(--bg);
-  border: 1px solid var(--border);
+  color: #212121;
+  background: #FFFFFF;
+  border: 1px solid #D8DAE1;
   border-radius: 5px;
   box-shadow: none;
   box-sizing: border-box;
@@ -323,7 +287,7 @@ input {
 
 /* Add arrow to select */
 select {
-  background-image: linear-gradient(45deg, transparent 49%, var(--text) 51%), linear-gradient(135deg, var(--text) 51%, transparent 49%);
+  background-image: linear-gradient(45deg, transparent 49%, #212121 51%), linear-gradient(135deg, #212121 51%, transparent 49%);
   background-position: calc(100% - 20px), calc(100% - 15px);
   background-size: 5px 5px, 5px 5px;
   background-repeat: no-repeat;
@@ -341,7 +305,7 @@ input[type=radio] {
 
 input[type=checkbox]:checked,
 input[type=radio]:checked {
-  background: var(--accent);
+  background: #0D47A1;
 }
 
 input[type=checkbox]:checked::after {
@@ -354,8 +318,8 @@ input[type=checkbox]:checked::after {
   top: 0.05em;
   left: 0.18em;
   background: transparent;
-  border-right: solid var(--bg) 0.08em;
-  border-bottom: solid var(--bg) 0.08em;
+  border-right: solid #FFFFFF 0.08em;
+  border-bottom: solid #FFFFFF 0.08em;
   font-size: 1.8em;
   transform: rotate(45deg);
 }
@@ -368,7 +332,7 @@ input[type=radio]:checked::after {
   border-radius: 100%;
   position: absolute;
   top: 0.125em;
-  background: var(--bg);
+  background: #FFFFFF;
   left: 0.125em;
   font-size: 32px;
 }
@@ -405,7 +369,7 @@ fieldset {
 
 /* Misc body elements */
 hr {
-  color: var(--border);
+  color: #D8DAE1;
   border-top: 1px;
   margin: 1rem auto;
 }
@@ -413,7 +377,7 @@ hr {
 mark {
   padding: 2px 5px;
   border-radius: 4px;
-  background: var(--marked);
+  background: #FFDD33;
 }
 
 main img, main video {
@@ -428,7 +392,7 @@ figure {
 
 figcaption {
   font-size: 0.9rem;
-  color: var(--text-light);
+  color: #585858;
   text-align: center;
   margin-bottom: 1rem;
 }
@@ -436,14 +400,14 @@ figcaption {
 blockquote {
   margin: 2rem 0 2rem 2rem;
   padding: 0.4rem 0.8rem;
-  border-left: 0.35rem solid var(--accent);
+  border-left: 0.35rem solid #0D47A1;
   opacity: 0.8;
   font-style: italic;
 }
 
 cite {
   font-size: 0.9rem;
-  color: var(--text-light);
+  color: #585858;
   font-style: normal;
 }
 
@@ -455,13 +419,13 @@ kbd,
 samp {
   font-size: 1.075rem;
   font-family: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-  color: var(--code);
+  color: #D81B60;
 }
 
 kbd {
-  color: var(--preformatted);
-  border: 1px solid var(--preformatted);
-  border-bottom: 3px solid var(--preformatted);
+  color: #444444;
+  border: 1px solid #444444;
+  border-bottom: 3px solid #444444;
   border-radius: 5px;
   padding: 0.1rem;
 }
@@ -471,15 +435,15 @@ pre {
   max-width: 100%;
   overflow: auto;
   overflow-x: auto;
-  color: var(--preformatted);
-  background: var(--accent-bg);
-  border: 1px solid var(--border);
+  color: #444444;
+  background: #F5F7FF;
+  border: 1px solid #D8DAE1;
   border-radius: 5px;
 }
 
 /* Fix embedded code within pre */
 pre code {
-  color: var(--preformatted);
+  color: #444444;
   background: none;
   margin: 0;
   padding: 0;

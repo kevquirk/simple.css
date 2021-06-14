@@ -237,7 +237,6 @@ input[type="radio"]:enabled:hover{
 
 /* Format the expanding box */
 details {
-  padding: .6rem 1rem;
   background: var(--accent-bg);
   border: 1px solid var(--border);
   border-radius: 5px;
@@ -247,14 +246,16 @@ details {
 summary {
   cursor: pointer;
   font-weight: bold;
+  padding: .6rem 1rem;
 }
 
 details[open] {
-  padding-bottom: .75rem;
+  padding: .6rem 1rem .75rem 1rem;
 }
 
 details[open] summary {
   margin-bottom: .5rem;
+  padding: 0;
 }
 
 details[open]>*:last-child {

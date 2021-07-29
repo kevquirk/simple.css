@@ -94,8 +94,8 @@ header p {
   margin: 0;
 }
 
-/* Fix header line height when title wraps */
-header h1 {
+/* Fix line height when title wraps */
+h1, h2, h3 {
   line-height: 1.1;
 }
 

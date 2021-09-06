@@ -54,6 +54,13 @@ html {
   font-size: 16px;
 }
 
+/* Set the font size globally, for when the screen is smaller (e.g. phones) */
+@media screen and (max-width: 1500px) {
+  html {
+    font-size: 20px;
+  }
+}
+
 /* Make the body a nice central block */
 body {
   color: var(--text);

@@ -16,5 +16,13 @@
   "bugs": {
     "url": "https://github.com/kevquirk/simple.css/issues"
   },
-  "homepage": "https://github.com/kevquirk/simple.css#readme"
+  "homepage": "https://github.com/kevquirk/simple.css#readme",
+  "keywords": [
+    "css",
+    "html",
+    "simple.css",
+    "simplecss.org",
+    "simplecss",
+    "classless"
+  ]
 }

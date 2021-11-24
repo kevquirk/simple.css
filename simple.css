@@ -188,6 +188,7 @@ input[type="button"] {
   padding: .7rem .9rem;
   margin: .5rem 0;
   transition: .4s;
+  cursor: pointer;
 }
 
 a button[disabled],

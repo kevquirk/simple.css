@@ -317,7 +317,7 @@ input {
   appearance: none;
 }
 
-/* Add arrow to select */
+/* Add arrow to  */
 select {
   background-image:
     linear-gradient(45deg, transparent 49%, var(--text) 51%),
@@ -329,6 +329,10 @@ select {
     5px 5px,
     5px 5px;
   background-repeat: no-repeat;
+}
+
+select[multiple] {
+  background-image: none;
 }
 
 /* checkbox and radio button style */

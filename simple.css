@@ -333,7 +333,6 @@ select {
 
 select[multiple] {
   background-image: none !important;
-  background: var(--bg);
 }
 
 /* checkbox and radio button style */

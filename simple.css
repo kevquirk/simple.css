@@ -332,7 +332,7 @@ select {
 }
 
 select[multiple] {
-  background-image: none;
+  background-image: none !important;
 }
 
 /* checkbox and radio button style */

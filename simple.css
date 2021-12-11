@@ -177,6 +177,7 @@ a:hover {
 
 a button,
 button,
+[role="button"],
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
@@ -192,6 +193,7 @@ input[type="button"] {
 
 a button[disabled],
 button[disabled],
+[role="button"][aria-disabled="true"],
 input[type="submit"][disabled],
 input[type="reset"][disabled],
 input[type="button"][disabled],
@@ -221,6 +223,8 @@ abbr {
 
 button:focus,
 button:enabled:hover,
+[role="button"]:focus,
+[role="button"]:not([aria-disabled="true"]):hover,
 input[type="submit"]:focus,
 input[type="submit"]:enabled:hover,
 input[type="reset"]:focus,

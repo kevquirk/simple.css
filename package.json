@@ -1,6 +1,6 @@
 {
   "name": "simpledotcss",
-  "version": "1.1",
+  "version": "1.1.0",
   "description": "Simple.css is a classless CSS template that allows you to make a good looking website really quickly.",
   "main": "simple.css",
   "files": [

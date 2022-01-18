@@ -21,9 +21,9 @@ jobs:
         branch: ${{ github.ref }}
 
     # FTP files to BunnyCDN
-    - name: Upload ftp
-      uses: sebastianpopp/ftp-action@releases/v2
-      with:
-        host: storage.bunnycdn.com
-        user: simple-css
-        password: ${{ secrets.bunny_api_key }}
+    # - name: Upload ftp
+    #  uses: sebastianpopp/ftp-action@releases/v2
+    #  with:
+    #    host: storage.bunnycdn.com
+    #    user: simple-css
+    #    password: ${{ secrets.bunny_api_key }}

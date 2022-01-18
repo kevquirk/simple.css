@@ -1,4 +1,4 @@
-name: Minify & Deploy to CDN
+name: Minify CSS
 
 on:
   push
@@ -19,11 +19,3 @@ jobs:
       with:
         commit_message: "Github Action: Auto Minified JS and CSS files"
         branch: ${{ github.ref }}
-
-    # FTP files to BunnyCDN
-    # - name: Upload ftp
-    #  uses: sebastianpopp/ftp-action@releases/v2
-    #  with:
-    #    host: storage.bunnycdn.com
-    #    user: simple-css
-    #    password: ${{ secrets.bunny_api_key }}

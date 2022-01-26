@@ -158,7 +158,6 @@ a:hover {
   text-decoration: none;
 }
 
-a button,
 button,
 [role="button"],
 input[type="submit"],
@@ -173,7 +172,6 @@ input[type="button"] {
   margin: 0.5rem 0;
 }
 
-a button[disabled],
 button[disabled],
 [role="button"][aria-disabled="true"],
 input[type="submit"][disabled],

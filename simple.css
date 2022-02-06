@@ -267,6 +267,10 @@ details[open] {
   padding: 0.6rem 1rem 0.75rem 1rem;
 }
 
+details[open] summary + * {
+  margin-top: 0;
+}
+
 details[open] summary {
   margin-bottom: 0.5rem;
   padding: 0;

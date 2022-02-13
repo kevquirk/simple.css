@@ -224,7 +224,7 @@ nav {
 
 nav a,
 nav a:visited {
-  margin: 0 1rem 0 0;
+  margin: 0 1rem 1rem 0;
   border: 1px solid var(--border);
   border-radius: 5px;
   color: var(--text);
@@ -241,6 +241,7 @@ nav a:hover {
 /* Reduce nav side on mobile */
 @media only screen and (max-width: 750px) {
   nav a {
+    margin: 0 1rem 0 0;
     border: none;
     padding: 0;
     color: var(--accent);

@@ -73,7 +73,7 @@ body > header {
 
 body > header h1 {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 1rem auto;
 }
 
 body > header p {
@@ -219,7 +219,7 @@ input[type="button"]:enabled:hover {
 nav {
   font-size: 1rem;
   line-height: 2;
-  padding: 1rem 0;
+  padding: 1rem 0 0 0;
 }
 
 nav a,

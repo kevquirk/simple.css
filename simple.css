@@ -158,6 +158,17 @@ a:hover {
   text-decoration: none;
 }
 
+/* Ensures links with role=button align with button styles/behavior. */
+[role="button"] {
+  text-decoration: none;
+  display: inline-block;
+  line-height: normal;
+}
+
+[role="button"]:visited {
+  color: var(--bg);
+}
+
 button,
 [role="button"],
 input[type="submit"],

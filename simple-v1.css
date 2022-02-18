@@ -368,7 +368,7 @@ input[type="checkbox"],
 input[type="radio"] {
   vertical-align: bottom;
   position: relative;
-  width: "auto";
+  width: auto;
 }
 
 input[type="radio"] {

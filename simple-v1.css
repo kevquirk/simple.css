@@ -1,10 +1,20 @@
 /* Set the global variables for everything. Change these to use your own fonts and colours. */
 :root {
   /* Set sans-serif & mono fonts */
-  --sans-font: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir,
-    "Nimbus Sans L", Roboto, Noto, "Segoe UI", Arial, Helvetica,
-    "Helvetica Neue", sans-serif;
-  --mono-font: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  --sans-font:
+    -apple-system,
+    blinkmacsystemfont,
+    "Avenir Next",
+    avenir,
+    "Nimbus Sans L",
+    roboto,
+    noto,
+    "Segoe UI",
+    arial,
+    helvetica,
+    "Helvetica Neue",
+    sans-serif;
+  --mono-font: consolas, menlo, monaco, "Andale Mono", "Ubuntu Mono", monospace;
 
   /* Body font size. By default, effectively 18.4px, based on 16px as 'root em' */
   --base-fontsize: 1.15rem;
@@ -25,7 +35,7 @@
   --accent-light: #90caf9;
   --code: #d81b60;
   --preformatted: #444;
-  --marked: #ffdd33;
+  --marked: #fd3;
   --disabled: #efefef;
 }
 
@@ -135,7 +145,7 @@ nav a.current:hover {
 
 footer {
   margin-top: 4rem;
-  padding: 2rem 1rem 1.5rem 1rem;
+  padding: 2rem 1rem 1.5rem;
   color: var(--text-light);
   font-size: 0.9rem;
   text-align: center;
@@ -144,25 +154,28 @@ footer {
 
 /* Format headers */
 h1 {
-  font-size: calc(
-    var(--base-fontsize) * var(--header-scale) * var(--header-scale) *
+  font-size:
+    calc(
+      var(--base-fontsize) * var(--header-scale) * var(--header-scale) *
       var(--header-scale) * var(--header-scale)
-  );
+    );
   margin-top: calc(var(--line-height) * 1.5rem);
 }
 
 h2 {
-  font-size: calc(
-    var(--base-fontsize) * var(--header-scale) * var(--header-scale) *
+  font-size:
+    calc(
+      var(--base-fontsize) * var(--header-scale) * var(--header-scale) *
       var(--header-scale)
-  );
+    );
   margin-top: calc(var(--line-height) * 1.5rem);
 }
 
 h3 {
-  font-size: calc(
-    var(--base-fontsize) * var(--header-scale) * var(--header-scale)
-  );
+  font-size:
+    calc(
+      var(--base-fontsize) * var(--header-scale) * var(--header-scale)
+    );
   margin-top: calc(var(--line-height) * 1.5rem);
 }
 
@@ -216,7 +229,6 @@ input[type="button"][disabled],
 input[type="checkbox"][disabled],
 input[type="radio"][disabled],
 select[disabled] {
-  cursor: default;
   opacity: 0.5;
   cursor: not-allowed;
 }
@@ -270,7 +282,7 @@ summary {
 }
 
 details[open] {
-  padding: 0.6rem 1rem 0.75rem 1rem;
+  padding: 0.6rem 1rem 0.75rem;
 }
 
 details[open] summary {
@@ -332,14 +344,13 @@ input {
   box-shadow: none;
   box-sizing: border-box;
   width: 60%;
-  -moz-appearance: none;
-  -webkit-appearance: none;
   appearance: none;
 }
 
 /* Add arrow to  */
 select {
-  background-image: linear-gradient(45deg, transparent 49%, var(--text) 51%),
+  background-image:
+    linear-gradient(45deg, transparent 49%, var(--text) 51%),
     linear-gradient(135deg, var(--text) 51%, transparent 49%);
   background-position: calc(100% - 20px), calc(100% - 15px);
   background-size: 5px 5px, 5px 5px;
@@ -351,10 +362,13 @@ select[multiple] {
 }
 
 /* checkbox and radio button style */
+
+/* Ensures the checkbox and radio inputs do not have a set width like other input fields */
 input[type="checkbox"],
 input[type="radio"] {
   vertical-align: bottom;
   position: relative;
+  width: "auto";
 }
 
 input[type="radio"] {
@@ -381,6 +395,7 @@ input[type="checkbox"]:checked::after {
   font-size: 1.8em;
   transform: rotate(45deg);
 }
+
 input[type="radio"]:checked::after {
   /* creates a colored circle for the checked radio button  */
   content: " ";
@@ -406,12 +421,6 @@ textarea {
   input {
     width: 100%;
   }
-}
-
-/* Ensures the checkbox and radio inputs do not have a set width like other input fields */
-input[type="checkbox"],
-input[type="radio"] {
-  width: auto;
 }
 
 /* do not show border around file selector button */

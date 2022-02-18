@@ -1,0 +1,24 @@
+name: CSS Lint
+on:
+  push:
+    branches:
+      - main
+  pull_request_target:
+    branches:
+      - main
+jobs:
+  run-linters:
+    name: CSS Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+      - name: Install Node.js dependencies
+        run: npm install --save-dev stylelint stylelint-config-standard
+      # https://github.com/marketplace/actions/lint-action
+      - name: Run stylelint
+        run: npx stylelint "**/*.css"

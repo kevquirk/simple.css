@@ -222,6 +222,27 @@ nav {
   padding: 1rem 0 0 0;
 }
 
+/* Use flexbox to allow items to wrap, as needed */
+nav ul,
+nav ol
+{
+  align-content:   space-around;
+  align-items:     center;
+  display:         flex;
+  flex-direction:  row;
+  justify-content: center;
+  list-style-type: none;
+  margin:          0;
+  padding:         0;
+}
+
+/* List items are inline elements, make them behave more like blocks */
+nav ul li,
+nav ol li
+{
+  display: inline-block;
+}
+
 nav a,
 nav a:visited {
   margin: 0 1rem 1rem 0;

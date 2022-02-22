@@ -238,6 +238,10 @@ nav a:hover {
   border-color: var(--accent);
 }
 
+nav a:last-child {
+  margin-right: 0;
+}
+
 /* Reduce nav side on mobile */
 @media only screen and (max-width: 750px) {
   nav a {

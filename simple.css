@@ -475,7 +475,7 @@ kbd {
   border: 1px solid var(--preformatted);
   border-bottom: 3px solid var(--preformatted);
   border-radius: 5px;
-  padding: 0.1rem;
+  padding: 0.1rem 0.4rem;
 }
 
 pre {

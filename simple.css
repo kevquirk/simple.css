@@ -223,8 +223,7 @@ nav {
 
 /* Use flexbox to allow items to wrap, as needed */
 nav ul,
-nav ol
-{
+nav ol {
   align-content:   space-around;
   align-items:     center;
   display:         flex;
@@ -237,8 +236,7 @@ nav ol
 
 /* List items are inline elements, make them behave more like blocks */
 nav ul li,
-nav ol li
-{
+nav ol li {
   display: inline-block;
 }
 

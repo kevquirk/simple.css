@@ -261,7 +261,7 @@ nav a:last-child {
 }
 
 /* Reduce nav side on mobile */
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 720px) {
   nav a {
     border: none;
     padding: 0;

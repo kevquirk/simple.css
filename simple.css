@@ -306,8 +306,8 @@ details[open] > *:last-child {
 table {
   border-collapse: collapse;
   display: block;
-  overflow: auto;
   margin: 1.5rem 0;
+  overflow: auto;
   width: 100%;
 }
 

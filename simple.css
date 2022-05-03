@@ -215,15 +215,15 @@ input[type="button"]:enabled:hover {
 }
 
 /* Format navigation */
-nav {
+header > nav {
   font-size: 1rem;
   line-height: 2;
   padding: 1rem 0 0 0;
 }
 
 /* Use flexbox to allow items to wrap, as needed */
-nav ul,
-nav ol {
+header > nav ul,
+header > nav ol {
   align-content:   space-around;
   align-items:     center;
   display:         flex;
@@ -235,13 +235,13 @@ nav ol {
 }
 
 /* List items are inline elements, make them behave more like blocks */
-nav ul li,
-nav ol li {
+header > nav ul li,
+header > nav ol li {
   display: inline-block;
 }
 
-nav a,
-nav a:visited {
+header > nav a,
+header > nav a:visited {
   margin: 0 1rem 1rem 0;
   border: 1px solid var(--border);
   border-radius: 5px;
@@ -251,18 +251,18 @@ nav a:visited {
   text-decoration: none;
 }
 
-nav a:hover {
+header > nav a:hover {
   color: var(--accent);
   border-color: var(--accent);
 }
 
-nav a:last-child {
+header > nav a:last-child {
   margin-right: 0;
 }
 
 /* Reduce nav side on mobile */
 @media only screen and (max-width: 720px) {
-  nav a {
+  header > nav a {
     border: none;
     padding: 0;
     color: var(--accent);

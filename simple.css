@@ -271,6 +271,34 @@ header > nav a:last-child {
   }
 }
 
+aside {
+  width: 30%;
+  padding: 0 15px;
+  margin-left: 15px;
+  float: right;
+  background: var(--accent-bg);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+}
+
+article {
+  border: 1px solid var(--border);
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+article h2:first-child,
+section h2:first-child {
+  margin-top: 1rem;
+}
+
+section {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 2rem 1rem;
+  margin: 3rem 0;
+}
+
 /* Format the expanding box */
 details {
   background: var(--accent-bg);

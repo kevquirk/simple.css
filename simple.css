@@ -397,7 +397,7 @@ select[multiple] {
 /* checkbox and radio button style */
 input[type="checkbox"],
 input[type="radio"] {
-  vertical-align: bottom;
+  vertical-align: middle;
   position: relative;
 }
 

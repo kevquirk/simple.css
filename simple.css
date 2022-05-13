@@ -80,10 +80,6 @@ body > header p {
   margin: 1rem auto;
 }
 
-body > header * {
-  color: var(--accent);
-}
-
 /* Add a little padding to ensure spacing is correct between content and header > nav */
 main {
   padding-top: 1.5rem;
@@ -154,7 +150,7 @@ h3 {
 /* Format links & buttons */
 a,
 a:visited {
-  color: var(--accent-bg);
+  color: var(--accent);
 }
 
 a:hover {
@@ -169,9 +165,9 @@ input[type="button"],
 label[type="button"] {
   border: none;
   border-radius: 5px;
-  background: var(--accent-bg);
+  background: var(--accent);
   font-size: 1rem;
-  color: var(--accent);
+  color: var(--bg);
   padding: 0.7rem 0.9rem;
   margin: 0.5rem 0;
 }
@@ -251,7 +247,7 @@ header > nav a:visited {
   margin: 0 1rem 1rem 0;
   border: 1px solid var(--border);
   border-radius: 5px;
-  color: var(--accent);
+  color: var(--text);
   display: inline-block;
   padding: 0.1rem 1rem;
   text-decoration: none;
@@ -384,7 +380,7 @@ input[type="radio"] {
 
 input[type="checkbox"]:checked,
 input[type="radio"]:checked {
-  background: var(--accent-bg);
+  background: var(--accent);
 }
 
 input[type="checkbox"]:checked::after {
@@ -474,7 +470,7 @@ figcaption {
 blockquote {
   margin: 2rem 0 2rem 2rem;
   padding: 0.4rem 0.8rem;
-  border-left: 0.35rem solid var(--accent-bg);
+  border-left: 0.35rem solid var(--accent);
   color: var(--text-light);
   font-style: italic;
 }

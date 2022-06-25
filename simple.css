@@ -22,6 +22,7 @@
 /* Dark theme */
 @media (prefers-color-scheme: dark) {
   :root {
+    color-scheme: dark;
     --bg: #212121;
     --accent-bg: #2b2b2b;
     --text: #dcdcdc;
@@ -52,12 +53,10 @@ body {
   font-size: 1.15rem;
   line-height: 1.5;
   display: grid;
-  grid-template-columns:
-    1fr min(45rem, 90%) 1fr;
+  grid-template-columns: 1fr min(45rem, 90%) 1fr;
   margin: 0;
 }
-
-body>* {
+body > * {
   grid-column: 2;
 }
 
@@ -81,7 +80,7 @@ body > header p {
   margin: 1rem auto;
 }
 
-/* Add a little padding to ensure spacing is correct between content and nav */
+/* Add a little padding to ensure spacing is correct between content and header > nav */
 main {
   padding-top: 1.5rem;
 }
@@ -162,7 +161,8 @@ button,
 [role="button"],
 input[type="submit"],
 input[type="reset"],
-input[type="button"] {
+input[type="button"],
+label[type="button"] {
   border: none;
   border-radius: 5px;
   background: var(--accent);
@@ -209,7 +209,9 @@ input[type="submit"]:enabled:hover,
 input[type="reset"]:focus,
 input[type="reset"]:enabled:hover,
 input[type="button"]:focus,
-input[type="button"]:enabled:hover {
+input[type="button"]:enabled:hover,
+label[type="button"]:focus,
+label[type="button"]:hover {
   filter: brightness(1.4);
   cursor: pointer;
 }
@@ -224,14 +226,14 @@ header > nav {
 /* Use flexbox to allow items to wrap, as needed */
 header > nav ul,
 header > nav ol {
-  align-content:   space-around;
-  align-items:     center;
-  display:         flex;
-  flex-direction:  row;
+  align-content: space-around;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
   list-style-type: none;
-  margin:          0;
-  padding:         0;
+  margin: 0;
+  padding: 0;
 }
 
 /* List items are inline elements, make them behave more like blocks */
@@ -252,8 +254,8 @@ header > nav a:visited {
 }
 
 header > nav a:hover {
-  color: var(--accent);
-  border-color: var(--accent);
+  filter: brightness(1.4);
+  cursor: pointer;
 }
 
 header > nav a:last-child {
@@ -265,7 +267,6 @@ header > nav a:last-child {
   header > nav a {
     border: none;
     padding: 0;
-    color: var(--accent);
     text-decoration: underline;
     line-height: 1;
   }
@@ -326,7 +327,7 @@ details[open] summary {
   padding: 0;
 }
 
-details[open] > *:last-child {
+details[open] > :last-child {
   margin-bottom: 0;
 }
 
@@ -542,4 +543,24 @@ pre code {
   background: none;
   margin: 0;
   padding: 0;
+}
+
+/*progress bar*/
+progress {
+  width: 100%;
+}
+progress::-webkit-progress-bar {
+  border-radius: 5px;
+}
+progress::-webkit-progress-value {
+  border-radius: 5px;
+  transition-property: width;
+  transition-duration: 0.3s;
+}
+progress::-moz-progress-bar {
+  border-radius: 5px;
+}
+
+label {
+  display: inline-block;
 }

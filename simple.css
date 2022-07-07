@@ -2,7 +2,7 @@
 :root {
   /* Set sans-serif & mono fonts */
   --sans-font: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir,
-    "Nimbus Sans L", Roboto, Noto, "Segoe UI", Arial, Helvetica,
+    "Nimbus Sans L", Roboto, "Noto Sans", "Segoe UI", Arial, Helvetica,
     "Helvetica Neue", sans-serif;
   --mono-font: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
 
@@ -507,6 +507,20 @@ cite {
   font-size: 0.9rem;
   color: var(--text-light);
   font-style: normal;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+dl dt {
+  grid-column-start: 1;
+  color: var(--text-light);
+}
+
+dl dd {
+  grid-column-start: 2;
 }
 
 /* Use mono font for code elements */

@@ -370,6 +370,7 @@ input {
   font-family: inherit;
   padding: 0.5rem;
   margin-bottom: 0.5rem;
+  margin-right: 1rem; 
   color: var(--text);
   background: var(--bg);
   border: 1px solid var(--border);
@@ -377,6 +378,7 @@ input {
   box-shadow: none;
   box-sizing: border-box;
   width: 60%;
+  min-width: min-content;
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
@@ -389,6 +391,7 @@ select {
   background-position: calc(100% - 20px), calc(100% - 15px);
   background-size: 5px 5px, 5px 5px;
   background-repeat: no-repeat;
+  padding-right: 25px;
 }
 
 select[multiple] {

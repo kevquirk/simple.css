@@ -383,17 +383,13 @@ input {
 }
 
 /* Add arrow to drop-down */
-select {
+select:not([multiple]) {
   background-image: linear-gradient(45deg, transparent 49%, var(--text) 51%),
     linear-gradient(135deg, var(--text) 51%, transparent 49%);
   background-position: calc(100% - 15px), calc(100% - 10px);
   background-size: 5px 5px, 5px 5px;
   background-repeat: no-repeat;
   padding-right: 25px;
-}
-
-select[multiple] {
-  background-image: none !important;
 }
 
 /* checkbox and radio button style */

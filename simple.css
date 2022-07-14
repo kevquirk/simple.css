@@ -414,12 +414,12 @@ input[type="radio"]:checked {
 input[type="checkbox"]:checked::after {
   /* Creates a rectangle with colored right and bottom borders which is rotated to look like a check mark */
   content: " ";
-  width: 0.1em;
-  height: 0.25em;
+  width: 0.18em;
+  height: 0.32em;
   border-radius: 0;
   position: absolute;
   top: 0.05em;
-  left: 0.18em;
+  left: 0.17em;
   background: transparent;
   border-right: solid var(--bg) 0.08em;
   border-bottom: solid var(--bg) 0.08em;

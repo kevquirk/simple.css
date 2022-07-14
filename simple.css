@@ -40,6 +40,11 @@
   }
 }
 
+/* Reset box-sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 html {
   /* Set the font globally */
   font-family: var(--sans-font);
@@ -67,7 +72,6 @@ body > header {
   text-align: center;
   padding: 0 0.5rem 2rem 0.5rem;
   grid-column: 1 / -1;
-  box-sizing: border-box;
 }
 
 body > header h1 {
@@ -119,6 +123,11 @@ h5 {
 
 h6 {
   font-size: 0.96rem;
+}
+
+/* Prevent long strings from overflowing container */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
 }
 
 /* Fix line height when title wraps */
@@ -370,32 +379,32 @@ input {
   font-family: inherit;
   padding: 0.5rem;
   margin-bottom: 0.5rem;
-  margin-right: 1rem; 
   color: var(--text);
   background: var(--bg);
   border: 1px solid var(--border);
   border-radius: 5px;
   box-shadow: none;
-  box-sizing: border-box;
-  width: 60%;
-  min-width: min-content;
+  max-width: 100%;
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
+  display: inline-block;
+}
+label {
+  display: block;
+}
+textarea:not([cols]) {
+  width: 100%;
 }
 
 /* Add arrow to drop-down */
-select {
+select:not([multiple]) {
   background-image: linear-gradient(45deg, transparent 49%, var(--text) 51%),
     linear-gradient(135deg, var(--text) 51%, transparent 49%);
-  background-position: calc(100% - 20px), calc(100% - 15px);
+  background-position: calc(100% - 15px), calc(100% - 10px);
   background-size: 5px 5px, 5px 5px;
   background-repeat: no-repeat;
   padding-right: 25px;
-}
-
-select[multiple] {
-  background-image: none !important;
 }
 
 /* checkbox and radio button style */
@@ -417,12 +426,12 @@ input[type="radio"]:checked {
 input[type="checkbox"]:checked::after {
   /* Creates a rectangle with colored right and bottom borders which is rotated to look like a check mark */
   content: " ";
-  width: 0.1em;
-  height: 0.25em;
+  width: 0.18em;
+  height: 0.32em;
   border-radius: 0;
   position: absolute;
   top: 0.05em;
-  left: 0.18em;
+  left: 0.17em;
   background: transparent;
   border-right: solid var(--bg) 0.08em;
   border-bottom: solid var(--bg) 0.08em;
@@ -442,11 +451,6 @@ input[type="radio"]:checked::after {
   font-size: 32px;
 }
 
-/* Make the textarea wider than other inputs */
-textarea {
-  width: 80%;
-}
-
 /* Makes input fields wider on smaller screens */
 @media only screen and (max-width: 720px) {
   textarea,
@@ -460,6 +464,12 @@ textarea {
 input[type="checkbox"],
 input[type="radio"] {
   width: auto;
+}
+
+/* Set a height for color input */
+input[type="color"] {
+  height: 2.5rem;
+  padding:  0.2rem;
 }
 
 /* do not show border around file selector button */
@@ -576,8 +586,4 @@ progress::-webkit-progress-value {
 }
 progress::-moz-progress-bar {
   border-radius: 5px;
-}
-
-label {
-  display: inline-block;
 }

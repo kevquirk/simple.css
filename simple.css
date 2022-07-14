@@ -462,6 +462,12 @@ input[type="radio"] {
   width: auto;
 }
 
+/* Set a height for color input */
+input[type="color"] {
+  height: 2.5rem;
+  padding:  0.2rem;
+}
+
 /* do not show border around file selector button */
 input[type="file"] {
   border: 0;

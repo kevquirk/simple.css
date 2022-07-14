@@ -125,6 +125,11 @@ h6 {
   font-size: 0.96rem;
 }
 
+/* Prevent long strings from overflowing container */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
 /* Fix line height when title wraps */
 h1,
 h2,

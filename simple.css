@@ -376,7 +376,7 @@ input {
   border-radius: 5px;
   box-shadow: none;
   box-sizing: border-box;
-  max-width: 100%;
+  width: 100%;
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
@@ -438,11 +438,6 @@ input[type="radio"]:checked::after {
   background: var(--bg);
   left: 0.125em;
   font-size: 32px;
-}
-
-/* Make the textarea wider than other inputs */
-textarea {
-  width: 100%;
 }
 
 /* Makes input fields wider on smaller screens */

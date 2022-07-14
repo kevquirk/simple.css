@@ -40,7 +40,7 @@
   }
 }
 
-/* Reset box-sizing and margins */
+/* Reset box-sizing */
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -384,10 +384,17 @@ input {
   border: 1px solid var(--border);
   border-radius: 5px;
   box-shadow: none;
-  width: 100%;
+  max-width: 100%;
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
+  display: inline-block;
+}
+label {
+  display: block;
+}
+textarea:not([cols]) {
+  width: 100%;
 }
 
 /* Add arrow to drop-down */
@@ -579,8 +586,4 @@ progress::-webkit-progress-value {
 }
 progress::-moz-progress-bar {
   border-radius: 5px;
-}
-
-label {
-  display: inline-block;
 }

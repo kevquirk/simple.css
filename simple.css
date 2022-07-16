@@ -45,6 +45,16 @@
   box-sizing: border-box;
 }
 
+/* Reset default appearance */
+textarea,
+select,
+input,
+progress {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
 html {
   /* Set the font globally */
   font-family: var(--sans-font);
@@ -239,6 +249,7 @@ header > nav ol {
   align-items: center;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   list-style-type: none;
   margin: 0;
@@ -253,7 +264,7 @@ header > nav ol li {
 
 header > nav a,
 header > nav a:visited {
-  margin: 0 1rem 1rem 0;
+  margin: 0 0.5rem 1rem 0.5rem;
   border: 1px solid var(--border);
   border-radius: 5px;
   color: var(--text);
@@ -267,10 +278,6 @@ header > nav a:hover {
   cursor: pointer;
 }
 
-header > nav a:last-child {
-  margin-right: 0;
-}
-
 /* Reduce nav side on mobile */
 @media only screen and (max-width: 720px) {
   header > nav a {
@@ -281,20 +288,36 @@ header > nav a:last-child {
   }
 }
 
+/* Consolidate box styling */
+aside, details, pre, progress {
+  background: var(--accent-bg);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
 aside {
+  font-size: 1rem;
   width: 30%;
   padding: 0 15px;
   margin-left: 15px;
   float: right;
-  background: var(--accent-bg);
-  border: 1px solid var(--border);
-  border-radius: 5px;
 }
 
-article {
+/* Make aside full-width on mobile */
+@media only screen and (max-width: 720px) {
+  aside {
+    width: 100%;
+    float: none;
+    margin-left: 0;
+  }
+}
+
+article, fieldset {
   border: 1px solid var(--border);
   padding: 1rem;
   border-radius: 5px;
+  margin-bottom: 1rem;
 }
 
 article h2:first-child,
@@ -307,14 +330,6 @@ section {
   border-bottom: 1px solid var(--border);
   padding: 2rem 1rem;
   margin: 3rem 0;
-}
-
-/* Format the expanding box */
-details {
-  background: var(--accent-bg);
-  border: 1px solid var(--border);
-  border-radius: 5px;
-  margin-bottom: 1rem;
 }
 
 summary {
@@ -385,9 +400,6 @@ input {
   border-radius: 5px;
   box-shadow: none;
   max-width: 100%;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
   display: inline-block;
 }
 label {
@@ -559,9 +571,6 @@ pre {
   max-width: 100%;
   overflow: auto;
   color: var(--preformatted);
-  background: var(--accent-bg);
-  border: 1px solid var(--border);
-  border-radius: 5px;
 }
 
 /* Fix embedded code within pre */
@@ -572,18 +581,34 @@ pre code {
   padding: 0;
 }
 
-/*progress bar*/
+/* Progress bars */
+/* Declarations are repeated because you */
+/* cannot combine vendor-specific selectors */
 progress {
   width: 100%;
 }
+
+progress:indeterminate {
+  background-color: var(--accent-bg);
+}
+
 progress::-webkit-progress-bar {
   border-radius: 5px;
+  background-color: var(--accent-bg);
 }
+
 progress::-webkit-progress-value {
   border-radius: 5px;
+  background-color: var(--accent);
+}
+
+progress::-moz-progress-bar {
+  border-radius: 5px;
+  background-color: var(--accent);
   transition-property: width;
   transition-duration: 0.3s;
 }
-progress::-moz-progress-bar {
-  border-radius: 5px;
+
+progress:indeterminate::-moz-progress-bar {
+  background-color: var(--accent-bg);
 }

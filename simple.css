@@ -306,10 +306,11 @@ aside {
   float: right;
 }
 
-article {
+article, fieldset {
   border: 1px solid var(--border);
   padding: 1rem;
   border-radius: 5px;
+  margin-bottom: 1rem;
 }
 
 article h2:first-child,

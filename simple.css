@@ -582,18 +582,34 @@ pre code {
   padding: 0;
 }
 
-/*progress bar*/
+/* Progress bars */
+/* Declarations are repeated because you */
+/* cannot combine vendor-specific selectors */
 progress {
   width: 100%;
 }
+
+progress:indeterminate {
+  background-color: var(--accent-bg);
+}
+
 progress::-webkit-progress-bar {
   border-radius: 5px;
+  background-color: var(--accent-bg);
 }
+
 progress::-webkit-progress-value {
   border-radius: 5px;
+  background-color: var(--accent);
+}
+
+progress::-moz-progress-bar {
+  border-radius: 5px;
+  background-color: var(--accent);
   transition-property: width;
   transition-duration: 0.3s;
 }
-progress::-moz-progress-bar {
-  border-radius: 5px;
+
+progress:indeterminate::-moz-progress-bar {
+  background-color: var(--accent-bg);
 }

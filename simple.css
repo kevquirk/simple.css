@@ -291,14 +291,19 @@ header > nav a:last-child {
   }
 }
 
+/* Consolidate box styling */
+aside, details, pre, progress {
+  background: var(--accent-bg);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
 aside {
   width: 30%;
   padding: 0 15px;
   margin-left: 15px;
   float: right;
-  background: var(--accent-bg);
-  border: 1px solid var(--border);
-  border-radius: 5px;
 }
 
 article {
@@ -317,14 +322,6 @@ section {
   border-bottom: 1px solid var(--border);
   padding: 2rem 1rem;
   margin: 3rem 0;
-}
-
-/* Format the expanding box */
-details {
-  background: var(--accent-bg);
-  border: 1px solid var(--border);
-  border-radius: 5px;
-  margin-bottom: 1rem;
 }
 
 summary {
@@ -395,9 +392,6 @@ input {
   border-radius: 5px;
   box-shadow: none;
   max-width: 100%;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
   display: inline-block;
 }
 label {
@@ -569,9 +563,6 @@ pre {
   max-width: 100%;
   overflow: auto;
   color: var(--preformatted);
-  background: var(--accent-bg);
-  border: 1px solid var(--border);
-  border-radius: 5px;
 }
 
 /* Fix embedded code within pre */

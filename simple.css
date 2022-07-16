@@ -249,6 +249,7 @@ header > nav ol {
   align-items: center;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   list-style-type: none;
   margin: 0;

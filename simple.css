@@ -45,6 +45,16 @@
   box-sizing: border-box;
 }
 
+/* Reset default appearance */
+textarea,
+select,
+input,
+progress {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
 html {
   /* Set the font globally */
   font-family: var(--sans-font);

@@ -358,7 +358,7 @@ details[open] > :last-child {
 /* Format tables */
 table {
   border-collapse: collapse;
-  display: block;
+  display: table;
   margin: 1.5rem 0;
   overflow: auto;
   width: 100%;

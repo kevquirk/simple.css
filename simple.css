@@ -345,7 +345,7 @@ section:last-child {
 }
 
 details {
-  padding: 0.6rem 1rem;
+  padding: 0.6rem 1rem 0.75rem 1rem;
 }
 
 summary {

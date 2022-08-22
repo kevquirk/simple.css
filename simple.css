@@ -586,7 +586,7 @@ pre {
 /* Fix embedded code within pre */
 pre code {
   color: var(--preformatted);
-  background-color: none;
+  background: none;
   margin: 0;
   padding: 0;
 }

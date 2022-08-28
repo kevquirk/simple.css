@@ -64,7 +64,7 @@ html {
 /* Make the body a nice central block */
 body {
   color: var(--text);
-  background: var(--bg);
+  background-color: var(--bg);
   font-size: 1.15rem;
   line-height: 1.5;
   display: grid;
@@ -77,7 +77,7 @@ body > * {
 
 /* Make the header bg full width, but the content inline with body */
 body > header {
-  background: var(--accent-bg);
+  background-color: var(--accent-bg);
   border-bottom: 1px solid var(--border);
   text-align: center;
   padding: 0 0.5rem 2rem 0.5rem;
@@ -184,7 +184,7 @@ input[type="button"],
 label[type="button"] {
   border: none;
   border-radius: 5px;
-  background: var(--accent);
+  background-color: var(--accent);
   font-size: 1rem;
   color: var(--bg);
   padding: 0.7rem 0.9rem;
@@ -290,7 +290,7 @@ header > nav a:hover {
 
 /* Consolidate box styling */
 aside, details, pre, progress {
-  background: var(--accent-bg);
+  background-color: var(--accent-bg);
   border: 1px solid var(--border);
   border-radius: 5px;
   margin-bottom: 1rem;
@@ -344,14 +344,16 @@ section:last-child {
   padding-bottom: 0;
 }
 
+details {
+  padding: 0.7rem 1rem;
+}
+
 summary {
   cursor: pointer;
   font-weight: bold;
-  padding: 0.6rem 1rem;
-}
-
-details[open] {
-  padding: 0.6rem 1rem 0.75rem 1rem;
+  padding: 0.7rem 1rem;
+  margin: -0.7rem -1rem;
+  word-break: break-all;
 }
 
 details[open] summary + * {
@@ -360,7 +362,6 @@ details[open] summary + * {
 
 details[open] summary {
   margin-bottom: 0.5rem;
-  padding: 0;
 }
 
 details[open] > :last-child {
@@ -384,13 +385,13 @@ th {
 }
 
 th {
-  background: var(--accent-bg);
+  background-color: var(--accent-bg);
   font-weight: bold;
 }
 
 tr:nth-child(even) {
   /* Set every other cell slightly darker. Improves readability. */
-  background: var(--accent-bg);
+  background-color: var(--accent-bg);
 }
 
 table caption {
@@ -407,7 +408,7 @@ input {
   padding: 0.5rem;
   margin-bottom: 0.5rem;
   color: var(--text);
-  background: var(--bg);
+  background-color: var(--bg);
   border: 1px solid var(--border);
   border-radius: 5px;
   box-shadow: none;
@@ -444,7 +445,7 @@ input[type="radio"] {
 
 input[type="checkbox"]:checked,
 input[type="radio"]:checked {
-  background: var(--accent);
+  background-color: var(--accent);
 }
 
 input[type="checkbox"]:checked::after {
@@ -456,7 +457,7 @@ input[type="checkbox"]:checked::after {
   position: absolute;
   top: 0.05em;
   left: 0.17em;
-  background: transparent;
+  background-color: transparent;
   border-right: solid var(--bg) 0.08em;
   border-bottom: solid var(--bg) 0.08em;
   font-size: 1.8em;
@@ -470,7 +471,7 @@ input[type="radio"]:checked::after {
   border-radius: 100%;
   position: absolute;
   top: 0.125em;
-  background: var(--bg);
+  background-color: var(--bg);
   left: 0.125em;
   font-size: 32px;
 }
@@ -511,7 +512,7 @@ hr {
 mark {
   padding: 2px 5px;
   border-radius: 4px;
-  background: var(--marked);
+  background-color: var(--marked);
 }
 
 img,

@@ -345,12 +345,15 @@ section:last-child {
 }
 
 details {
-  padding: 0.6rem 1rem 0.75rem 1rem;
+  padding: 0.7rem 1rem;
 }
 
 summary {
   cursor: pointer;
   font-weight: bold;
+  padding: 0.7rem 1rem;
+  margin: -0.7rem -1rem;
+  word-break: break-all;
 }
 
 details[open] summary + * {

@@ -356,11 +356,11 @@ summary {
   word-break: break-all;
 }
 
-details[open] summary + * {
+details[open] > summary + * {
   margin-top: 0;
 }
 
-details[open] summary {
+details[open] > summary {
   margin-bottom: 0.5rem;
 }
 

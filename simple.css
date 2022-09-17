@@ -53,7 +53,7 @@ progress {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-}
+}   
 
 html {
   /* Set the font globally */
@@ -448,32 +448,28 @@ input[type="radio"]:checked {
   background-color: var(--accent);
 }
 
+
 input[type="checkbox"]:checked::after {
-  /* Creates a rectangle with colored right and bottom borders which is rotated to look like a check mark */
-  content: " ";
-  width: 0.18em;
-  height: 0.32em;
-  border-radius: 0;
+  /* Puts a check mark ✔ (HEX: #2714) if the checkbox is checked*/
+  content: "✔";
   position: absolute;
-  top: 0.05em;
-  left: 0.17em;
-  background-color: transparent;
-  border-right: solid var(--bg) 0.08em;
-  border-bottom: solid var(--bg) 0.08em;
-  font-size: 1.8em;
-  transform: rotate(45deg);
+  top: -25%;
+  left: 0.055em;
+  font-size: 0.9em;
+  color: var(--bg);
+  rotate: 15deg;
 }
 input[type="radio"]:checked::after {
-  /* creates a colored circle for the checked radio button  */
+  /* creates a colored circle inside the checked radio button  */
   content: " ";
   width: 0.25em;
   height: 0.25em;
   border-radius: 100%;
   position: absolute;
-  top: 0.125em;
+  top: 0.15em;
+  left: 0.12em;
   background-color: var(--bg);
-  left: 0.125em;
-  font-size: 32px;
+  font-size: 34px;
 }
 
 /* Makes input fields wider on smaller screens */

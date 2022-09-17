@@ -547,18 +547,8 @@ cite {
   font-style: normal;
 }
 
-dl {
-  display: grid;
-  grid-template-columns: auto 1fr;
-}
-
-dl dt {
-  grid-column-start: 1;
-  color: var(--text-light);
-}
-
-dl dd {
-  grid-column-start: 2;
+dt {
+    color: var(--text-light);
 }
 
 /* Use mono font for code elements */

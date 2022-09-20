@@ -17,7 +17,7 @@
   --preformatted: #444;
   --marked: #ffdd33;
   --disabled: #efefef;
-  /* Brightness filter is applied on header links in hover state*/
+  /* Brightness filter is applied on header links in hover state */
   --hover-brightness: brightness(0.6);
 }
 
@@ -34,7 +34,7 @@
     --code: #f06292;
     --preformatted: #ccc;
     --disabled: #111;
-    /* Brightness filter in hover state is updated to improve visibility in dark-mode*/
+    /* Brightness filter in hover state is updated to improve visibility in dark-mode */
     --hover-brightness: brightness(1.4);
   }
   /* Add a bit of transparency so light media isn't so glaring in dark mode */

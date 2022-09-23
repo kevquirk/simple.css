@@ -510,7 +510,7 @@ input[type="file"] {
 hr {
   color: var(--border);
   border-top: 1px;
-  margin: 3rem auto;
+  margin: 2rem auto;
 }
 
 mark {

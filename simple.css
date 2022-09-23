@@ -508,8 +508,9 @@ input[type="file"] {
 
 /* Misc body elements */
 hr {
-  color: var(--border);
-  border-top: 1px;
+  border: none;
+  height: 1px;
+  background: var(--border);
   margin: 1rem auto;
 }
 

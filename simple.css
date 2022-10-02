@@ -218,9 +218,11 @@ input[type="range"] {
   padding: 0;
 }
 
-/* Set the cursor to '?' while hovering over an abbreviation */
-abbr {
+/* Set the cursor to '?' on an abbreviation and style the abbreviation to show that there is more information underneath */
+abbr[title] {
   cursor: help;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
 }
 
 button:focus,

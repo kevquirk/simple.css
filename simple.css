@@ -491,10 +491,10 @@ input[type="radio"]:checked::after {
   }
 }
 
-/* Ensures the checkbox and radio inputs do not have a set width like other input fields */
+/* Keep toggleable inputs from expanding to full width */
 input[type="checkbox"],
 input[type="radio"] {
-  width: auto;
+  width: min-content;
 }
 
 /* Set a height for color input */

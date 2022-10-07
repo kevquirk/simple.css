@@ -439,6 +439,12 @@ input[type="checkbox"],
 input[type="radio"] {
   vertical-align: middle;
   position: relative;
+  width: min-content;
+}
+
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+  display: inline-block;
 }
 
 input[type="radio"] {
@@ -485,12 +491,6 @@ input[type="radio"]:checked::after {
   input {
     width: 100%;
   }
-}
-
-/* Keep toggleable inputs from expanding to full width */
-input[type="checkbox"],
-input[type="radio"] {
-  width: min-content;
 }
 
 /* Set a height for color input */

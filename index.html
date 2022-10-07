@@ -954,6 +954,7 @@
 				<p><a href="#top">[Top]</a></p>
 				<fieldset id="forms__checkbox">
 					<legend>Checkboxes</legend>
+					<p>Nested <code>label > input</code></p>
 					<ul>
 						<li><label for="checkbox1"><input id="checkbox1" name="checkbox" type="checkbox"
 									checked="checked"> Choice A</label></li>
@@ -962,15 +963,46 @@
 						<li><label for="checkbox3"><input id="checkbox3" name="checkbox" type="checkbox"> Choice
 								C</label></li>
 					</ul>
+					<p>Sibling <code>input + label</code></p>
+					<ul>
+						<li>
+							<input id="checkbox4" name="checkbox" type="checkbox" checked="checked">
+							<label for="checkbox4">Choice A</label>
+						</li>
+						<li>
+							<input id="checkbox5" name="checkbox" type="checkbox">
+							<label for="checkbox5">Choice B</label>
+						</li>
+						<li>
+							<input id="checkbox6" name="checkbox" type="checkbox">
+							<label for="checkbox6">Choice C</label>
+						</li>
+					</ul>
 				</fieldset>
 				<p><a href="#top">[Top]</a></p>
 				<fieldset id="forms__radio">
 					<legend>Radio buttons</legend>
+					<p>Nested <code>label > input</code></p>
 					<ul>
 						<li><label for="radio1"><input id="radio1" name="radio" type="radio" checked="checked">
 								Option 1</label></li>
 						<li><label for="radio2"><input id="radio2" name="radio" type="radio"> Option 2</label></li>
 						<li><label for="radio3"><input id="radio3" name="radio" type="radio"> Option 3</label></li>
+					</ul>
+					<p>Sibling <code>input + label</code></p>
+					<ul>
+						<li>
+							<input id="radio4" name="radio" type="radio" checked="checked">
+							<label for="radio4">Option 1</label>
+						</li>
+						<li>
+							<input id="radio5" name="radio" type="radio">
+							<label for="radio5">Option 2</label>
+						</li>
+						<li>
+							<input id="radio6" name="radio" type="radio">
+							<label for="radio6">Option 3</label>
+						</li>
 					</ul>
 				</fieldset>
 				<p><a href="#top">[Top]</a></p>

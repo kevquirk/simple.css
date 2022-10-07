@@ -442,6 +442,11 @@ input[type="radio"] {
   width: min-content;
 }
 
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+  display: inline-block;
+}
+
 input[type="radio"] {
   border-radius: 100%;
 }

@@ -306,6 +306,10 @@ tr:nth-child(even) {
   background: var(--accent-bg);
 }
 
+tr:hover td {
+  color: var(--accent);
+}
+
 table caption {
   font-weight: bold;
   margin-bottom: 0.5rem;

@@ -220,17 +220,11 @@ abbr[title] {
   text-decoration-style: dotted;
 }
 
-button:focus,
 button:enabled:hover,
-[role="button"]:focus,
 [role="button"]:not([aria-disabled="true"]):hover,
-input[type="submit"]:focus,
 input[type="submit"]:enabled:hover,
-input[type="reset"]:focus,
 input[type="reset"]:enabled:hover,
-input[type="button"]:focus,
 input[type="button"]:enabled:hover,
-label[type="button"]:focus,
 label[type="button"]:hover {
   filter: brightness(1.4);
   cursor: pointer;

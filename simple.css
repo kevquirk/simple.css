@@ -198,15 +198,16 @@ input[type="button"][disabled],
 input[type="checkbox"][disabled],
 input[type="radio"][disabled],
 select[disabled] {
-  opacity: 0.5;
   cursor: not-allowed;
 }
 
 input:disabled,
 textarea:disabled,
-select:disabled {
+select:disabled,
+button[disabled] {
   cursor: not-allowed;
   background-color: var(--disabled);
+  color: var(--text-light)
 }
 
 input[type="range"] {

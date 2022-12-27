@@ -198,15 +198,16 @@ input[type="button"][disabled],
 input[type="checkbox"][disabled],
 input[type="radio"][disabled],
 select[disabled] {
-  opacity: 0.5;
   cursor: not-allowed;
 }
 
 input:disabled,
 textarea:disabled,
-select:disabled {
+select:disabled,
+button[disabled] {
   cursor: not-allowed;
   background-color: var(--disabled);
+  color: var(--text-light)
 }
 
 input[type="range"] {
@@ -220,20 +221,23 @@ abbr[title] {
   text-decoration-style: dotted;
 }
 
-button:focus,
 button:enabled:hover,
-[role="button"]:focus,
 [role="button"]:not([aria-disabled="true"]):hover,
-input[type="submit"]:focus,
 input[type="submit"]:enabled:hover,
-input[type="reset"]:focus,
 input[type="reset"]:enabled:hover,
-input[type="button"]:focus,
 input[type="button"]:enabled:hover,
-label[type="button"]:focus,
 label[type="button"]:hover {
   filter: brightness(1.4);
   cursor: pointer;
+}
+
+button:focus-visible:where(:enabled, [role="button"]:not([aria-disabled="true"])),
+input:enabled:focus-visible:where([type="submit"],
+  [type="reset"],
+  [type="button"],
+) {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
 }
 
 /* Format navigation */

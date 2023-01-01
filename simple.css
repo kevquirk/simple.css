@@ -227,7 +227,7 @@ input[type="submit"]:enabled:hover,
 input[type="reset"]:enabled:hover,
 input[type="button"]:enabled:hover,
 label[type="button"]:hover {
-  filter: brightness(1.4);
+  filter: brightness(1.1);
   cursor: pointer;
 }
 

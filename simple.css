@@ -5,6 +5,7 @@
     "Nimbus Sans L", Roboto, "Noto Sans", "Segoe UI", Arial, Helvetica,
     "Helvetica Neue", sans-serif;
   --mono-font: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  --standard-border-radius: 5px;
 
   /* Default (light) theme */
   --bg: #fff;
@@ -182,7 +183,7 @@ input[type="reset"],
 input[type="button"],
 label[type="button"] {
   border: none;
-  border-radius: 5px;
+  border-radius: var(--standard-border-radius);
   background-color: var(--accent);
   font-size: 1rem;
   color: var(--bg);
@@ -272,7 +273,7 @@ header > nav a,
 header > nav a:visited {
   margin: 0 0.5rem 1rem 0.5rem;
   border: 1px solid var(--border);
-  border-radius: 5px;
+  border-radius: var(--standard-border-radius);
   color: var(--text);
   display: inline-block;
   padding: 0.1rem 1rem;
@@ -299,7 +300,7 @@ header > nav a:hover {
 aside, details, pre, progress {
   background-color: var(--accent-bg);
   border: 1px solid var(--border);
-  border-radius: 5px;
+  border-radius: var(--standard-border-radius);
   margin-bottom: 1rem;
 }
 
@@ -323,7 +324,7 @@ aside {
 article, fieldset {
   border: 1px solid var(--border);
   padding: 1rem;
-  border-radius: 5px;
+  border-radius: var(--standard-border-radius);
   margin-bottom: 1rem;
 }
 
@@ -417,7 +418,7 @@ input {
   color: var(--text);
   background-color: var(--bg);
   border: 1px solid var(--border);
-  border-radius: 5px;
+  border-radius: var(--standard-border-radius);
   box-shadow: none;
   max-width: 100%;
   display: inline-block;
@@ -519,7 +520,7 @@ hr {
 
 mark {
   padding: 2px 5px;
-  border-radius: 4px;
+  border-radius: var(--standard-border-radius);
   background-color: var(--marked);
 }
 
@@ -527,7 +528,7 @@ img,
 video {
   max-width: 100%;
   height: auto;
-  border-radius: 5px;
+  border-radius: var(--standard-border-radius);
 }
 
 figure {
@@ -573,7 +574,7 @@ kbd {
   color: var(--preformatted);
   border: 1px solid var(--preformatted);
   border-bottom: 3px solid var(--preformatted);
-  border-radius: 5px;
+  border-radius: var(--standard-border-radius);
   padding: 0.1rem 0.4rem;
 }
 
@@ -604,17 +605,17 @@ progress:indeterminate {
 }
 
 progress::-webkit-progress-bar {
-  border-radius: 5px;
+  border-radius: var(--standard-border-radius);
   background-color: var(--accent-bg);
 }
 
 progress::-webkit-progress-value {
-  border-radius: 5px;
+  border-radius: var(--standard-border-radius);
   background-color: var(--accent);
 }
 
 progress::-moz-progress-bar {
-  border-radius: 5px;
+  border-radius: var(--standard-border-radius);
   background-color: var(--accent);
   transition-property: width;
   transition-duration: 0.3s;

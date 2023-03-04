@@ -358,10 +358,7 @@ details[open] > :last-child {
 /* Format tables */
 table {
   border-collapse: collapse;
-  display: table;
   margin: 1.5rem 0;
-  overflow: auto;
-  width: 100%;
 }
 
 td,
@@ -511,10 +508,12 @@ video {
 
 figure {
   margin: 0;
-  text-align: center;
+  display: block;
+  overflow-x: auto;
 }
 
 figcaption {
+  text-align: center;
   font-size: 0.9rem;
   color: var(--text-light);
   margin-bottom: 1rem;

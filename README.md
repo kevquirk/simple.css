@@ -1,6 +1,6 @@
 # Simple.css {}
 
-Simple.css is a classless CSS template that allows you to make a good looking website really quickly.
+Simple.css is a CSS template that allows you to make a good looking website really quickly.
 
 **Find out more at [https://simplecss.org](https://simplecss.org).**
 

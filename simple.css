@@ -623,3 +623,28 @@ progress::-moz-progress-bar {
 progress:indeterminate::-moz-progress-bar {
   background-color: var(--accent-bg);
 }
+
+/* Classes for buttons and notices */
+.button {
+  border: none;
+  border-radius: 5px;
+  background: var(--accent);
+  font-size: 1rem;
+  color: var(--bg);
+  padding: 0.7rem 0.9rem;
+  margin: 0.5rem 0;
+}
+
+.button:hover,
+.button:focus {
+  filter: brightness(1.4);
+  cursor: pointer;
+}
+
+.notice {
+  background: var(--accent-bg);
+  border: 2px solid var(--border);
+  border-radius: 5px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}

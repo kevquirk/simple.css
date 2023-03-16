@@ -627,6 +627,7 @@ progress:indeterminate::-moz-progress-bar {
 /* Classes for buttons and notices */
 .button,
 .button:visited {
+  text-decoration: none;
   border: none;
   border-radius: 5px;
   background: var(--accent);

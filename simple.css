@@ -519,6 +519,7 @@ mark {
   padding: 2px 5px;
   border-radius: var(--standard-border-radius);
   background-color: var(--marked);
+  color: black;
 }
 
 img,

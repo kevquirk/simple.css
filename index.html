@@ -64,6 +64,7 @@
 					<li><a href="#embedded__iframe">IFrames</a></li>
 					<li><a href="#embedded__embed">Embed</a></li>
 					<li><a href="#embedded__object">Object</a></li>
+					<li><a href="#embedded__dialog">Dialog</a></li>
 				</ul>
 			</li>
 			<li>
@@ -882,6 +883,22 @@
 					<h2>Object</h2>
 				</header>
 				<object data="index.html" height="300"></object>
+				<footer>
+					<p><a href="#top">[Top]</a></p>
+				</footer>
+			</article>
+			<article id="embedded__dialog">
+				<header>
+					<h2>Dialog</h2>
+				</header>
+				<button onclick="document.getElementById('dialog-demo').showModal()">Open</button>
+				<dialog id="dialog-demo">
+				<h2>Dialog</h2>
+				<p>Dialogs are a new HTML5 element that can be used to create modal dialogs or pop-up windows.</p>
+				<form method="dialog">
+					<button>Close</button>
+				</form>
+				</dialog>
 				<footer>
 					<p><a href="#top">[Top]</a></p>
 				</footer>

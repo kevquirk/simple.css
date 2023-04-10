@@ -1,5 +1,6 @@
 /* Global variables. */
-:root {
+:root,
+::backdrop {
   /* Set sans-serif & mono fonts */
   --sans-font: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir,
     "Nimbus Sans L", Roboto, "Noto Sans", "Segoe UI", Arial, Helvetica,
@@ -22,7 +23,8 @@
 
 /* Dark theme */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root,
+  ::backdrop {
     color-scheme: dark;
     --bg: #212121;
     --accent-bg: #2b2b2b;
@@ -321,7 +323,7 @@ aside {
   }
 }
 
-article, fieldset {
+article, fieldset, dialog {
   border: 1px solid var(--border);
   padding: 1rem;
   border-radius: var(--standard-border-radius);
@@ -623,6 +625,23 @@ progress::-moz-progress-bar {
 
 progress:indeterminate::-moz-progress-bar {
   background-color: var(--accent-bg);
+}
+
+dialog {
+  max-width: 40rem;
+  margin: auto;
+}
+
+dialog::backdrop {
+  background-color: var(--bg);
+  opacity: 0.8;
+}
+
+@media only screen and (max-width: 720px) {
+  dialog {
+    max-width: 100%;
+    margin: auto 1em;
+  }
 }
 
 /* Classes for buttons and notices */

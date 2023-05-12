@@ -191,6 +191,9 @@ label[type="button"] {
   color: var(--bg);
   padding: 0.7rem 0.9rem;
   margin: 0.5rem 0;
+
+  /* Ensure buttons use correct font */
+  font-family: inherit;
 }
 
 button[disabled],

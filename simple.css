@@ -315,7 +315,9 @@ aside {
   padding: 0 15px;
   margin-inline-start: 15px;
   float: right;
-  float: inline-end;
+}
+*[dir="rtl"] aside {
+  float: left;
 }
 
 /* Make aside full-width on mobile */
@@ -442,6 +444,9 @@ select:not([multiple]) {
   background-repeat: no-repeat;
   padding-inline-end: 25px;
 }
+*[dir="rtl"] select:not([multiple]) {
+  background-position: 10px, 15px;
+}
 
 /* checkbox and radio button style */
 input[type="checkbox"],
@@ -475,7 +480,7 @@ input[type="checkbox"]:checked::after {
   top: 0.05em;
   left: 0.17em;
   background-color: transparent;
-  border-inline-end: solid var(--bg) 0.08em;
+  border-right: solid var(--bg) 0.08em;
   border-bottom: solid var(--bg) 0.08em;
   font-size: 1.8em;
   transform: rotate(45deg);

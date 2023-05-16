@@ -285,7 +285,8 @@ header > nav a:visited {
   text-decoration: none;
 }
 
-header > nav a:hover {
+header > nav a:hover,
+header > nav a.current {
   border-color: var(--accent);
   color: var(--accent);
   cursor: pointer;

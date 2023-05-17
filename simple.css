@@ -191,6 +191,9 @@ label[type="button"] {
   color: var(--bg);
   padding: 0.7rem 0.9rem;
   margin: 0.5rem 0;
+
+  /* Ensure buttons use correct font */
+  font-family: inherit;
 }
 
 button[disabled],
@@ -282,7 +285,8 @@ header > nav a:visited {
   text-decoration: none;
 }
 
-header > nav a:hover {
+header > nav a:hover,
+header > nav a.current {
   border-color: var(--accent);
   color: var(--accent);
   cursor: pointer;
@@ -310,8 +314,11 @@ aside {
   font-size: 1rem;
   width: 30%;
   padding: 0 15px;
-  margin-left: 15px;
+  margin-inline-start: 15px;
   float: right;
+}
+*[dir="rtl"] aside {
+  float: left;
 }
 
 /* Make aside full-width on mobile */
@@ -319,7 +326,7 @@ aside {
   aside {
     width: 100%;
     float: none;
-    margin-left: 0;
+    margin-inline-start: 0;
   }
 }
 
@@ -387,7 +394,7 @@ table {
 td,
 th {
   border: 1px solid var(--border);
-  text-align: left;
+  text-align: start;
   padding: 0.5rem;
 }
 
@@ -436,7 +443,10 @@ select:not([multiple]) {
   background-position: calc(100% - 15px), calc(100% - 10px);
   background-size: 5px 5px, 5px 5px;
   background-repeat: no-repeat;
-  padding-right: 25px;
+  padding-inline-end: 25px;
+}
+*[dir="rtl"] select:not([multiple]) {
+  background-position: 10px, 15px;
 }
 
 /* checkbox and radio button style */
@@ -545,9 +555,11 @@ figcaption {
 }
 
 blockquote {
-  margin: 2rem 0 2rem 2rem;
+  margin-inline-start: 2rem;
+  margin-inline-end: 0;
+  margin-block: 2rem;
   padding: 0.4rem 0.8rem;
-  border-left: 0.35rem solid var(--accent);
+  border-inline-start: 0.35rem solid var(--accent);
   color: var(--text-light);
   font-style: italic;
 }

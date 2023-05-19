@@ -286,7 +286,8 @@ header > nav a:visited {
 }
 
 header > nav a:hover,
-header > nav a.current {
+header > nav a.current,
+header > nav a[aria-current="page"] {
   border-color: var(--accent);
   color: var(--accent);
   cursor: pointer;

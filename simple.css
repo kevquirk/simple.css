@@ -180,6 +180,7 @@ a:hover {
 
 button,
 [role="button"],
+a[role="button"],
 input[type="submit"],
 input[type="reset"],
 input[type="button"],
@@ -191,13 +192,17 @@ label[type="button"] {
   color: var(--bg);
   padding: 0.7rem 0.9rem;
   margin: 0.5rem 0;
+  text-decoration: none;
+
+  /* makes anchor and button elements the same size */
+  display: inline-block;
+  line-height: 1;
 
   /* Ensure buttons use correct font */
   font-family: inherit;
 }
 
 button[disabled],
-[role="button"][aria-disabled="true"],
 input[type="submit"][disabled],
 input[type="reset"][disabled],
 input[type="button"][disabled],
@@ -210,6 +215,7 @@ select[disabled] {
 input:disabled,
 textarea:disabled,
 select:disabled,
+[role="button"][aria-disabled="true"],
 button[disabled] {
   cursor: not-allowed;
   background-color: var(--disabled);

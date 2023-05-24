@@ -669,12 +669,19 @@ dialog::backdrop {
   color: var(--bg);
   padding: 0.7rem 0.9rem;
   margin: 0.5rem 0;
+  line-height: 1;
 }
 
-.button:hover,
-.button:focus {
+.button:not([aria-disabled=true]):hover,
+.button:not([aria-disabled=true]):focus {
   filter: brightness(1.4);
   cursor: pointer;
+}
+
+.button[aria-disabled="true"] {
+  cursor: not-allowed;
+  background-color: var(--disabled);
+  color: var(--text-light)
 }
 
 .notice {

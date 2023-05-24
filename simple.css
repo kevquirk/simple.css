@@ -239,6 +239,7 @@ label[type="button"]:hover {
   cursor: pointer;
 }
 
+.button:focus-visible,
 button:focus-visible:where(:enabled),
 input:enabled:focus-visible:where(
   [type="submit"],

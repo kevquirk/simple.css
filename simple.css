@@ -179,7 +179,8 @@ a:hover {
 }
 
 button,
-[role="button"],
+.button,
+a.button, /* extra specificity to override a */
 input[type="submit"],
 input[type="reset"],
 input[type="button"],
@@ -192,12 +193,15 @@ label[type="button"] {
   padding: 0.7rem 0.9rem;
   margin: 0.5rem 0;
 
+  /* remove a.button underline */
+  text-decoration: none;
+
   /* Ensure buttons use correct font */
   font-family: inherit;
 }
 
 button[disabled],
-[role="button"][aria-disabled="true"],
+.button[aria-disabled="true"],
 input[type="submit"][disabled],
 input[type="reset"][disabled],
 input[type="button"][disabled],
@@ -207,6 +211,7 @@ select[disabled] {
   cursor: not-allowed;
 }
 
+.button[aria-disabled="true"], 
 input:disabled,
 textarea:disabled,
 select:disabled,
@@ -228,7 +233,7 @@ abbr[title] {
 }
 
 button:enabled:hover,
-[role="button"]:not([aria-disabled="true"]):hover,
+.button:not([aria-disabled="true"]):hover,
 input[type="submit"]:enabled:hover,
 input[type="reset"]:enabled:hover,
 input[type="button"]:enabled:hover,
@@ -237,7 +242,7 @@ label[type="button"]:hover {
   cursor: pointer;
 }
 
-button:focus-visible:where(:enabled, [role="button"]:not([aria-disabled="true"])),
+button:focus-visible:where(:enabled),
 input:enabled:focus-visible:where(
   [type="submit"],
   [type="reset"],
@@ -657,33 +662,7 @@ dialog::backdrop {
   }
 }
 
-/* Classes for buttons and notices */
-.button,
-.button:visited {
-  display: inline-block;
-  text-decoration: none;
-  border: none;
-  border-radius: 5px;
-  background: var(--accent);
-  font-size: 1rem;
-  color: var(--bg);
-  padding: 0.7rem 0.9rem;
-  margin: 0.5rem 0;
-  line-height: 1;
-}
-
-.button:not([aria-disabled=true]):hover,
-.button:not([aria-disabled=true]):focus {
-  filter: brightness(1.4);
-  cursor: pointer;
-}
-
-.button[aria-disabled="true"] {
-  cursor: not-allowed;
-  background-color: var(--disabled);
-  color: var(--text-light)
-}
-
+/* Classes for notices */
 .notice {
   background: var(--accent-bg);
   border: 2px solid var(--border);

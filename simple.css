@@ -197,17 +197,6 @@ label[type="button"] {
   line-height: normal;
 }
 
-button[disabled],
-.button[aria-disabled="true"],
-input[type="submit"][disabled],
-input[type="reset"][disabled],
-input[type="button"][disabled],
-input[type="checkbox"][disabled],
-input[type="radio"][disabled],
-select[disabled] {
-  cursor: not-allowed;
-}
-
 .button[aria-disabled="true"], 
 input:disabled,
 textarea:disabled,

@@ -180,7 +180,6 @@ a:hover {
 
 button,
 .button,
-a.button, /* extra specificity to override a */
 input[type="submit"],
 input[type="reset"],
 input[type="button"],

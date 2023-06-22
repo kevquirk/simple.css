@@ -654,6 +654,9 @@ dialog::backdrop {
 sup, sub {
   vertical-align: baseline;
   position: relative;
+}
+
+sup {
   top: -0.4em;
 }
 

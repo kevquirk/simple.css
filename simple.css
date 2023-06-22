@@ -649,6 +649,18 @@ dialog::backdrop {
   }
 }
 
+/* Superscript & Subscript */
+/* Prevent scripts from affecting line-height. */
+sup, sub {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+}
+
+sub { 
+  top: 0.3em; 
+}
+
 /* Classes for notices */
 .notice {
   background: var(--accent-bg);

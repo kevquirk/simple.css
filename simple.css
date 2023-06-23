@@ -527,6 +527,10 @@ mark {
   color: black;
 }
 
+mark a {
+  color: #0d47a1;
+}
+
 img,
 video {
   max-width: 100%;

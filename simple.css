@@ -178,6 +178,10 @@ a:hover {
   text-decoration: none;
 }
 
+mark a {
+  color: black;
+}
+
 button,
 .button,
 a.button, /* extra specificity to override a */

@@ -185,15 +185,9 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"],
 label[type="button"] {
-  border: none;
-  border-radius: var(--standard-border-radius);
   background-color: var(--accent);
-  font-size: 1rem;
   color: var(--bg);
-  padding: 0.7rem 0.9rem;
-  margin: 0.5rem 0;
   text-decoration: none;
-  font-family: inherit;
   line-height: normal;
 }
 
@@ -409,7 +403,9 @@ table caption {
 /* Format forms */
 textarea,
 select,
-input {
+input,
+button,
+.button {
   font-size: inherit;
   font-family: inherit;
   padding: 0.5rem;

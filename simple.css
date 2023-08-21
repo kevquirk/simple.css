@@ -185,8 +185,10 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"],
 label[type="button"] {
+  border-color: var(--accent);
   background-color: var(--accent);
   color: var(--bg);
+  padding: 0.5rem 0.9rem;
   text-decoration: none;
   line-height: normal;
 }

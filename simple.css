@@ -185,7 +185,7 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"],
 label[type="button"] {
-  border-color: var(--accent);
+  border: 1px solid var(--accent);
   background-color: var(--accent);
   color: var(--bg);
   padding: 0.5rem 0.9rem;
@@ -200,7 +200,8 @@ select:disabled,
 button[disabled] {
   cursor: not-allowed;
   background-color: var(--disabled);
-  color: var(--text-light)
+  border-color: var(--disabled);
+  color: var(--text-light);
 }
 
 input[type="range"] {
@@ -412,13 +413,17 @@ button,
   font-family: inherit;
   padding: 0.5rem;
   margin-bottom: 0.5rem;
-  color: var(--text);
-  background-color: var(--bg);
-  border: 1px solid var(--border);
   border-radius: var(--standard-border-radius);
   box-shadow: none;
   max-width: 100%;
   display: inline-block;
+}
+textarea,
+select,
+input {
+  color: var(--text);
+  background-color: var(--bg);
+  border: 1px solid var(--border);
 }
 label {
   display: block;

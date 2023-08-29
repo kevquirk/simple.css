@@ -220,6 +220,14 @@ label[type="button"].secondary {
   color: var(--accent);
 }
 
+.button.secondary[aria-disabled="true"],
+input.secondary:disabled,
+button.secondary[disabled] {
+  background-color: transparent;
+  border: 3px solid var(--disabled);
+  color: var(--text-light);
+}
+
 /* Set the cursor to '?' on an abbreviation and style the abbreviation to show that there is more information underneath */
 abbr[title] {
   cursor: help;

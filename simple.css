@@ -208,6 +208,18 @@ input[type="range"] {
   padding: 0;
 }
 
+/* Buttons as secondary action */
+button.secondary,
+.button.secondary,
+a.button.secondary, /* extra specificity to override a */
+input[type="reset"].secondary,
+input[type="button"].secondary,
+label[type="button"].secondary {
+  border: 2px solid var(--accent);
+  background-color: transparent;
+  color: var(--accent);
+}
+
 /* Set the cursor to '?' on an abbreviation and style the abbreviation to show that there is more information underneath */
 abbr[title] {
   cursor: help;

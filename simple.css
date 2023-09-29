@@ -467,6 +467,7 @@ input[type="radio"] {
 }
 
 input[type="checkbox"]:checked,
+input[type="checkbox"]:indeterminate,
 input[type="radio"]:checked {
   background-color: var(--accent);
 }
@@ -485,6 +486,17 @@ input[type="checkbox"]:checked::after {
   border-bottom: solid var(--bg) 0.08em;
   font-size: 1.8em;
   transform: rotate(45deg);
+}
+input[type="checkbox"]:indeterminate::after {
+  content: " ";
+  width: 0.34em;
+  height: 0.1em;
+  border-radius: 0;
+  position: absolute;
+  top: 0.2em;
+  left: 0.09em;
+  background-color: var(--bg);
+  font-size: 1.8em;
 }
 input[type="radio"]:checked::after {
   /* creates a colored circle for the checked radio button  */

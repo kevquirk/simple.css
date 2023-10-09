@@ -86,6 +86,10 @@ body > header {
   grid-column: 1 / -1;
 }
 
+body > header > *:only-child {
+  margin-block-start: 2rem;
+}
+
 body > header h1 {
   max-width: 1200px;
   margin: 1rem auto;

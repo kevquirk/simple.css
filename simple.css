@@ -15,6 +15,7 @@
   --text-light: #585858;
   --border: #898EA4;
   --accent: #0d47a1;
+  --accent-text: var(--bg);
   --code: #d81b60;
   --preformatted: #444;
   --marked: #ffdd33;
@@ -31,6 +32,7 @@
     --text: #dcdcdc;
     --text-light: #ababab;
     --accent: #ffb300;
+    --accent-text: var(--bg);
     --code: #f06292;
     --preformatted: #ccc;
     --disabled: #111;
@@ -195,7 +197,7 @@ input[type="button"],
 label[type="button"] {
   border: 1px solid var(--accent);
   background-color: var(--accent);
-  color: var(--bg);
+  color: var(--accent-text);
   padding: 0.5rem 0.9rem;
   text-decoration: none;
   line-height: normal;

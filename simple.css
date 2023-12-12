@@ -178,6 +178,23 @@ h3 {
   }
 }
 
+/* Reduce some vertical space on mobile */
+@media only screen and (max-width: 720px) {
+  body > header {
+    padding-bottom: .5rem;
+  }
+  section:first-child {
+    margin-top: 1rem;
+  }
+  section:last-child {
+    margin-bottom: 2rem;
+  }
+  body > footer {
+    margin-top: 1rem;
+    padding-top: 1rem;
+  }
+}
+
 /* Format links & buttons */
 a,
 a:visited {

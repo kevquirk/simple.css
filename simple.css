@@ -15,6 +15,7 @@
   --text-light: #585858;
   --border: #898EA4;
   --accent: #0d47a1;
+  --accent-hover: #1266e2;
   --accent-text: var(--bg);
   --code: #d81b60;
   --preformatted: #444;
@@ -32,6 +33,7 @@
     --text: #dcdcdc;
     --text-light: #ababab;
     --accent: #ffb300;
+    --accent-hover: #ffe099;
     --accent-text: var(--bg);
     --code: #f06292;
     --preformatted: #ccc;
@@ -231,7 +233,8 @@ input[type="submit"]:enabled:hover,
 input[type="reset"]:enabled:hover,
 input[type="button"]:enabled:hover,
 label[type="button"]:hover {
-  filter: brightness(1.4);
+  background-color: var(--accent-hover);
+  border-color: var(--accent-hover);
   cursor: pointer;
 }
 

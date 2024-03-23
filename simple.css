@@ -564,11 +564,17 @@ figure {
   overflow-x: auto;
 }
 
+figure > img,
+figure > picture > img {
+  display: block;
+  margin-inline: auto;
+}
+
 figcaption {
   text-align: center;
   font-size: 0.9rem;
   color: var(--text-light);
-  margin-bottom: 1rem;
+  margin-block: 1rem;
 }
 
 blockquote {

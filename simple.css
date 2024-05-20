@@ -396,6 +396,7 @@ table {
 
 figure > table {
   width: max-content;
+  margin: 0;
 }
 
 td,

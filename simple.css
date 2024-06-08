@@ -359,6 +359,10 @@ section:first-child {
   padding-top: 0;
 }
 
+section + section {
+  margin-top: 0;
+}
+
 section:last-child {
   border-bottom: 0;
   padding-bottom: 0;

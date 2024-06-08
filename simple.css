@@ -341,7 +341,9 @@ article, fieldset, dialog {
 }
 
 article h2:first-child,
-section h2:first-child {
+section h2:first-child,
+article h3:first-child,
+section h3:first-child {
   margin-top: 1rem;
 }
 

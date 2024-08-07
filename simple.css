@@ -43,6 +43,8 @@
   img,
   video {
     opacity: 0.8;
+    /* Support transparent images which are probably designed for light backgrounds */
+    background-color: #fff;
   }
 }
 

@@ -47,7 +47,9 @@
 }
 
 /* Reset box-sizing */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -77,6 +79,7 @@ body {
   grid-template-columns: 1fr min(45rem, 90%) 1fr;
   margin: 0;
 }
+
 body > * {
   grid-column: 2;
 }
@@ -150,7 +153,13 @@ p {
 }
 
 /* Prevent long strings from overflowing container */
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 
@@ -307,7 +316,10 @@ header > nav a[aria-current="true"] {
 }
 
 /* Consolidate box styling */
-aside, details, pre, progress {
+aside,
+details,
+pre,
+progress {
   background-color: var(--accent-bg);
   border: 1px solid var(--border);
   border-radius: var(--standard-border-radius);
@@ -321,6 +333,7 @@ aside {
   margin-inline-start: 15px;
   float: right;
 }
+
 *[dir="rtl"] aside {
   float: left;
 }
@@ -334,7 +347,9 @@ aside {
   }
 }
 
-article, fieldset, dialog {
+article,
+fieldset,
+dialog {
   border: 1px solid var(--border);
   padding: 1rem;
   border-radius: var(--standard-border-radius);
@@ -443,6 +458,7 @@ button,
   max-width: 100%;
   display: inline-block;
 }
+
 textarea,
 select,
 input {
@@ -450,9 +466,11 @@ input {
   background-color: var(--bg);
   border: 1px solid var(--border);
 }
+
 label {
   display: block;
 }
+
 textarea:not([cols]) {
   width: 100%;
 }
@@ -466,6 +484,7 @@ select:not([multiple]) {
   background-repeat: no-repeat;
   padding-inline-end: 25px;
 }
+
 *[dir="rtl"] select:not([multiple]) {
   background-position: 10px, 15px;
 }
@@ -507,6 +526,7 @@ input[type="checkbox"]:checked::after {
   font-size: 1.8em;
   transform: rotate(45deg);
 }
+
 input[type="radio"]:checked::after {
   /* creates a colored circle for the checked radio button  */
   content: " ";
@@ -689,7 +709,8 @@ dialog::backdrop {
 
 /* Superscript & Subscript */
 /* Prevent scripts from affecting line-height. */
-sup, sub {
+sup,
+sub {
   vertical-align: baseline;
   position: relative;
 }

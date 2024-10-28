@@ -669,6 +669,7 @@ progress:indeterminate::-moz-progress-bar {
 }
 
 dialog {
+  background-color: var(--bg);
   max-width: 40rem;
   margin: auto;
 }

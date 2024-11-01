@@ -193,8 +193,7 @@ button,
 a.button, /* extra specificity to override a */
 input[type="submit"],
 input[type="reset"],
-input[type="button"],
-label[type="button"] {
+input[type="button"] {
   border: 1px solid var(--accent);
   background-color: var(--accent);
   color: var(--accent-text);
@@ -229,8 +228,7 @@ button:enabled:hover,
 .button:not([aria-disabled="true"]):hover,
 input[type="submit"]:enabled:hover,
 input[type="reset"]:enabled:hover,
-input[type="button"]:enabled:hover,
-label[type="button"]:hover {
+input[type="button"]:enabled:hover {
   background-color: var(--accent-hover);
   border-color: var(--accent-hover);
   cursor: pointer;

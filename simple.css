@@ -707,3 +707,49 @@ sub {
   padding: 1.5rem;
   margin: 2rem 0;
 }
+
+/* Print */
+@media print {
+  @page {
+    margin: 1cm;
+  }
+  *:not(input, select) {
+    background: none !important;
+  }
+  body {
+    display: block;
+  }
+  body > header nav,
+  body > footer,
+  a[href^="#fn"] {
+    display: none;
+  }
+  a[href^="http"]::after {
+    content: " <" attr(href) ">";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  a {
+    text-decoration: none;
+  }
+  p {
+    widows: 3;
+    orphans: 3;
+  }
+  hr {
+    border-top: 1px solid var(--border);
+  }
+  mark {
+    border: 1px solid var(--border);
+  }
+  pre, table, figure, img, svg {
+    break-inside: avoid;
+  }
+  pre code {
+    white-space: pre-wrap;
+  }
+  button, .button {
+    color: var(--text) !important;
+  }
+}

@@ -713,15 +713,14 @@ sub {
   @page {
     margin: 1cm;
   }
-  *:not(input, select) {
-    background: none !important;
-  }
   body {
     display: block;
   }
+  body > header {
+    background-color: unset;
+  }
   body > header nav,
-  body > footer,
-  a[href^="#fn"] {
+  body > footer {
     display: none;
   }
   a[href^="http"]::after {
@@ -748,8 +747,5 @@ sub {
   }
   pre code {
     white-space: pre-wrap;
-  }
-  button, .button {
-    color: var(--text) !important;
   }
 }

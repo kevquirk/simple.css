@@ -723,6 +723,10 @@ sub {
   body > footer {
     display: none;
   }
+  article {
+    border: none;
+    padding: 0;
+  }
   a[href^="http"]::after {
     content: " <" attr(href) ">";
   }

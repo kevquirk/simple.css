@@ -327,9 +327,6 @@ aside {
   margin-inline-start: 0;
   float: none;
 }
-*[dir="rtl"] aside {
-  float: left;
-}
 
 /* Make aside 30% width on tablets and above */
 @media only screen and (min-width: 720px) {
@@ -337,6 +334,9 @@ aside {
     width: 30%;
     float: right;
     margin-inline-start: 15px;
+  }
+  *[dir="rtl"] aside {
+    float: left;
   }
 }
 

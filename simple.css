@@ -290,7 +290,7 @@ header > nav a:visited {
   text-decoration: underline;
   line-height: 1;
 }
-/* Reduce nav side on mobile */
+/* Increase nav size on tablets and above */
 @media only screen and (min-width: 720px) {
   header > nav a {
     border: 1px solid var(--border);

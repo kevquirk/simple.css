@@ -167,7 +167,7 @@ h3 {
   line-height: 1.1;
 }
 
-/* Reduce header size on mobile */
+/* Increase header size on tablets and above */
 @media only screen and (min-width: 720px) {
   h1 {
     font-size: 3;

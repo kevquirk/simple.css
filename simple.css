@@ -120,21 +120,21 @@ body > footer {
 
 /* Format headers */
 h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 h2 {
-  font-size: 2.6rem;
+  font-size: 2.1;
   margin-top: 3rem;
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 1.75rem;
   margin-top: 3rem;
 }
 
 h4 {
-  font-size: 1.44rem;
+  font-size: 1.25;
 }
 
 h5 {
@@ -168,21 +168,21 @@ h3 {
 }
 
 /* Reduce header size on mobile */
-@media only screen and (max-width: 720px) {
+@media only screen and (min-width: 720px) {
   h1 {
-    font-size: 2.5rem;
+    font-size: 3;
   }
 
   h2 {
-    font-size: 2.1rem;
+    font-size: 2.6rem;
   }
 
   h3 {
-    font-size: 1.75rem;
+    font-size: 2rem;
   }
 
   h4 {
-    font-size: 1.25rem;
+    font-size: 1.44rem;
   }
 }
 

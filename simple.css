@@ -283,12 +283,21 @@ header > nav ol li {
 header > nav a,
 header > nav a:visited {
   margin: 0 0.5rem 1rem 0.5rem;
-  border: 1px solid var(--border);
-  border-radius: var(--standard-border-radius);
+  border: none;
   color: var(--text);
   display: inline-block;
-  padding: 0.1rem 1rem;
-  text-decoration: none;
+  padding: 0;
+  text-decoration: underline;
+  line-height: 1;
+}
+/* Reduce nav side on mobile */
+@media only screen and (min-width: 720px) {
+  header > nav a {
+    border: 1px solid var(--border);
+    border-radius: var(--standard-border-radius);
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+  }
 }
 
 header > nav a:hover,
@@ -298,16 +307,6 @@ header > nav a[aria-current="true"] {
   border-color: var(--accent);
   color: var(--accent);
   cursor: pointer;
-}
-
-/* Reduce nav side on mobile */
-@media only screen and (max-width: 720px) {
-  header > nav a {
-    border: none;
-    padding: 0;
-    text-decoration: underline;
-    line-height: 1;
-  }
 }
 
 /* Consolidate box styling */

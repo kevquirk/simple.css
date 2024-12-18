@@ -322,21 +322,21 @@ progress {
 
 aside {
   font-size: 1rem;
-  width: 30%;
+  width: 100%;
   padding: 0 15px;
-  margin-inline-start: 15px;
-  float: right;
+  margin-inline-start: 0;
+  float: none;
 }
 *[dir="rtl"] aside {
   float: left;
 }
 
-/* Make aside full-width on mobile */
-@media only screen and (max-width: 720px) {
+/* Make aside 30% width on tablets and above */
+@media only screen and (min-width: 720px) {
   aside {
-    width: 100%;
-    float: none;
-    margin-inline-start: 0;
+    width: 30%;
+    float: right;
+    margin-inline-start: 15px;
   }
 }
 

@@ -672,8 +672,8 @@ progress:indeterminate::-moz-progress-bar {
 
 dialog {
   background-color: var(--bg);
-  max-width: 40rem;
-  margin: auto;
+  max-width: 100%;
+  margin: auto 1em;
 }
 
 dialog::backdrop {
@@ -681,10 +681,10 @@ dialog::backdrop {
   opacity: 0.8;
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (min-width: 720px) {
   dialog {
-    max-width: 100%;
-    margin: auto 1em;
+    max-width: 40rem;
+    margin: auto;
   }
 }
 

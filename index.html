@@ -5,8 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tab Switcher</title>
 <style>
+  /* Define custom fonts using @font-face */
+  @font-face {
+    font-family: 'SF Pro Display';
+    src: url('fonts/SFPRODISPLAYREGULAR.OTF') format('opentype'); /* Regular font */
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'SF Pro Display';
+    src: url('fonts/SFPRODISPLAYBOLD.OTF') format('opentype'); /* Bold font */
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  /* Apply the custom font to the body */
   body {
-    font-family: Arial, sans-serif;
+    font-family: 'SF Pro Display', sans-serif;  /* Use your custom font */
     margin: 0;
     padding: 0;
     display: flex;
@@ -31,7 +47,7 @@
                 inset 0px -2px 1.04202px rgba(255, 255, 255, 0.1), 
                 inset 0px 2px 1.04202px rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(52.1011px);
-    border-radius: 60px 60px 0px 0px;  /* Reduced corner rounding by 50% */
+    border-radius: 60px 60px 0px 0px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -46,17 +62,18 @@
     cursor: pointer;
     font-size: 16px;
     text-align: center;
-    transition: color 0.2s ease;  /* Smooth transition for active tab color */
-    -webkit-tap-highlight-color: transparent;  /* Disable Safari tap highlight */
+    font-family: 'SF Pro Display', sans-serif;  /* Apply SF Pro Display font */
+    transition: color 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
   }
   .tab-bar button.active {
-    color: #037AFF;  /* Current tab text is blue */
+    color: #037AFF;  /* Custom color for the active tab text */
   }
   .tab-bar button:focus,
   .tab-bar button:active {
-    outline: none;  /* Remove focus and active outlines */
-    background: none;  /* Prevent background from appearing on click */
-    box-shadow: none;  /* Remove any box-shadow on click */
+    outline: none;
+    background: none;
+    box-shadow: none;
   }
 </style>
 </head>

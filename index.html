@@ -51,8 +51,11 @@
   .tab-bar button.active {
     color: blue;  /* Current tab text is blue */
   }
-  .tab-bar button:focus {
-    outline: none;  /* Remove focus outline */
+  .tab-bar button:focus,
+  .tab-bar button:active {
+    outline: none;  /* Remove focus and active outlines */
+    background: none;  /* Prevent background from appearing on click */
+    box-shadow: none;  /* Remove any box-shadow on click */
   }
 </style>
 </head>

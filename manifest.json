@@ -1,0 +1,16 @@
+{
+  "name": "MySign",
+  "short_name": "MySign",
+  "description": "MySign",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#037AFF",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/Gliddd4/mysignios/main/IMG_4153.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

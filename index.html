@@ -31,7 +31,7 @@
                 inset 0px -2px 1.04202px rgba(255, 255, 255, 0.1), 
                 inset 0px 2px 1.04202px rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(52.1011px);
-    border-radius: 121px 121px 0px 0px;
+    border-radius: 60px 60px 0px 0px;  /* Reduced corner rounding by 50% */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -46,14 +46,10 @@
     cursor: pointer;
     font-size: 16px;
     text-align: center;
-    transition: background-color 0.2s ease, color 0.2s ease;
-  }
-  .tab-bar button:active {
-    background-color: gray;
-    color: white;
+    transition: color 0.2s ease;
   }
   .tab-bar button.active {
-    font-weight: bold;
+    color: blue;  /* Current tab text is blue */
   }
 </style>
 </head>

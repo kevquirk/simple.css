@@ -19,13 +19,21 @@
     width: 100%;
   }
   .tab-bar {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1110px;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 8.33617px 6.25213px rgba(0, 0, 0, 0.05), 
+                inset 0px -2px 1.04202px rgba(255, 255, 255, 0.1), 
+                inset 0px 2px 1.04202px rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(52.1011px);
+    border-radius: 121px 121px 0px 0px;
     display: flex;
     justify-content: space-around;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background: #333;
-    color: white;
+    align-items: center;
   }
   .tab-bar button {
     flex: 1;
@@ -35,9 +43,11 @@
     color: white;
     cursor: pointer;
     font-size: 16px;
+    text-align: center;
   }
   .tab-bar button.active {
-    background: #555;
+    font-weight: bold;
+    color: #000;
   }
 </style>
 </head>
@@ -47,7 +57,7 @@
 
 <div class="tab-bar">
   <button onclick="loadPage('home.html')" class="active">Home</button>
-  <button onclick="loadPage('tutorial.html')">Tutorials</button>
+  <button onclick="loadPage('tutorials.html')">Tutorials</button>
   <button onclick="loadPage('about.html')">About</button>
 </div>
 

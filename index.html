@@ -1,58 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unblacklist iDevice Guide</title>
-    <link rel="stylesheet" href="simple.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tab Switcher</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  iframe {
+    flex: 1;
+    border: none;
+    width: 100%;
+  }
+  .tab-bar {
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #333;
+    color: white;
+  }
+  .tab-bar button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  .tab-bar button.active {
+    background: #555;
+  }
+</style>
 </head>
 <body>
-    <nav>
-        <a href="/">Home</a>
-        <a href="/tutorials">Tutorials</a>
-        <a href="/about">About</a>
-    </nav>
-    
-    <article>
-        <h1>Intro</h1>
-        <p>This guide is a tutorial on how to unblacklist your iDevice.</p>
 
-        <h2>Downsides</h2>
-        <ul>
-            <li>None lol</li>
-        </ul>
+<iframe id="content-frame" src="home.html"></iframe>
 
-        <h1>Guide</h1>
-        <ol>
-            <li>
-                Head to <strong>Settings App &gt; Apple Account &gt; iCloud</strong> and make sure <strong>iCloud Backup is turned on</strong>. 
-                If it isn't, click iCloud Backup and turn the top option labeled "Back up this iDevice" on. 
-                <strong>I don't recommend backing up your phone on cellular</strong> because that uses up a lot of data.
-            </li>
-            <li>
-                Click the option labeled "Back up now" at the bottom of <strong>Settings App &gt; Apple Account &gt; iCloud</strong>. 
-                Wait for your iPhone to backup until it's finished.
-            </li>
-            <li>
-                Head to <strong>Settings App &gt; Apple Account</strong> and scroll to the bottom and click the option labeled sign out. 
-                Then type in your Apple Account password.
-            </li>
-            <li>
-                Turn all the switches on in the next menu to keep a copy of your data on the iPhone. 
-                <strong>Turning them off will result in your data being lost</strong>.
-            </li>
-            <li>
-                Go back to the <strong>Settings App</strong> and scroll down until you see the option labeled general. 
-                Then select the option labeled Transfer or Reset iPhone at the bottom of the General tab. 
-                Then select <strong>Erase All Content and Settings</strong>. 
-                Then click continue and enter your passcode.
-            </li>
-            <li>
-                Wait for the reset to finish and log back in with iCloud.
-            </li>
-        </ol>
-    </article>
+<div class="tab-bar">
+  <button onclick="loadPage('home.html')" class="active">Home</button>
+  <button onclick="loadPage('tutorials.html')">Tutorials</button>
+  <button onclick="loadPage('about.html')">About</button>
+</div>
 
-    <p>Skibidi</p>
+<script>
+  function loadPage(page) {
+    document.getElementById('content-frame').src = page;
+    document.querySelectorAll('.tab-bar button').forEach(button => {
+      button.classList.remove('active');
+    });
+    document.querySelector(`.tab-bar button[onclick="loadPage('${page}')"]`).classList.add('active');
+  }
+</script>
+
 </body>
 </html>

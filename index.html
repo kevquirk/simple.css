@@ -21,11 +21,10 @@
     width: 100%;
   }
   .tab-bar {
-    position: absolute;
+    position: fixed;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 1110px;
+    left: 0;
+    width: 100%;
     height: 70px;
     background: rgba(255, 255, 255, 0.1);
     box-shadow: 0px 8.33617px 6.25213px rgba(0, 0, 0, 0.05), 
@@ -36,6 +35,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    z-index: 1000;
   }
   .tab-bar button {
     flex: 1;
@@ -46,10 +46,14 @@
     cursor: pointer;
     font-size: 16px;
     text-align: center;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  .tab-bar button:active {
+    background-color: gray;
+    color: white;
   }
   .tab-bar button.active {
     font-weight: bold;
-    color: #000;
   }
 </style>
 </head>

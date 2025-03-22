@@ -102,7 +102,7 @@ body > header p {
   margin: 1rem auto;
 }
 
-/* Add a little padding to ensure spacing is correct between content and header > nav */
+/* Add a little padding to ensure spacing is correct between content and header nav */
 main {
   padding-top: 1.5rem;
 }
@@ -246,15 +246,15 @@ input:enabled:focus-visible:where(
 }
 
 /* Format navigation */
-header > nav {
+header nav {
   font-size: 1rem;
   line-height: 2;
   padding: 1rem 0 0 0;
 }
 
 /* Use flexbox to allow items to wrap, as needed */
-header > nav ul,
-header > nav ol {
+header nav ul,
+header nav ol {
   align-content: space-around;
   align-items: center;
   display: flex;
@@ -267,13 +267,13 @@ header > nav ol {
 }
 
 /* List items are inline elements, make them behave more like blocks */
-header > nav ul li,
-header > nav ol li {
+header nav ul li,
+header nav ol li {
   display: inline-block;
 }
 
-header > nav a,
-header > nav a:visited {
+header nav a,
+header nav a:visited {
   margin: 0 0.5rem 1rem 0.5rem;
   border: 1px solid var(--border);
   border-radius: var(--standard-border-radius);
@@ -283,10 +283,10 @@ header > nav a:visited {
   text-decoration: none;
 }
 
-header > nav a:hover,
-header > nav a.current,
-header > nav a[aria-current="page"],
-header > nav a[aria-current="true"] {
+header nav a:hover,
+header nav a.current,
+header nav a[aria-current="page"],
+header nav a[aria-current="true"] {
   border-color: var(--accent);
   color: var(--accent);
   cursor: pointer;
@@ -294,7 +294,7 @@ header > nav a[aria-current="true"] {
 
 /* Reduce nav side on mobile */
 @media only screen and (max-width: 720px) {
-  header > nav a {
+  header nav a {
     border: none;
     padding: 0;
     text-decoration: underline;

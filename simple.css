@@ -1,7 +1,19 @@
 /* Global variables. */
 :root {
-  /* Set sans-serif & mono fonts */
-  --sans-font: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir,
+  /*
+   * Set sans-serif & mono fonts.
+   * The sans-serif stack prioritizes 'system-ui', instructing the browser
+   * to use the operating system's native UI font. This provides the most
+   * seamless integration and familiar look/feel for the user, often with
+   * performance benefits as the font is typically pre-loaded by the OS.
+   *
+   * The subsequent fonts (-apple-system, BlinkMacSystemFont, Segoe UI, etc.)
+   * serve as fallbacks for specific operating systems or older browsers
+   * that may not support 'system-ui', aiming to provide the best possible
+   * native-like font in those cases. The stack ends with the generic
+   * 'sans-serif' as the ultimate fallback.
+  */
+  --sans-font: system-ui, -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir,
     "Nimbus Sans L", Roboto, "Noto Sans", "Segoe UI", Arial, Helvetica,
     "Helvetica Neue", sans-serif;
   --mono-font: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;

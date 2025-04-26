@@ -215,6 +215,25 @@ button[disabled] {
 
 input[type="range"] {
   padding: 0;
+  --size: 1.5rem;
+  --radius: calc(var(--standard-border-radius) - 1px);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  height: var(--size);
+  width: var(--size);
+  background-color: var(--accent);
+  border-radius: var(--radius);
+}
+
+input[type="range"]::-moz-range-thumb {
+  appearance: none;
+  height: var(--size);
+  width: var(--size);
+  background-color: var(--accent);
+  border-radius: var(--radius);
+  border: none;
 }
 
 /* Set the cursor to '?' on an abbreviation and style the abbreviation to show that there is more information underneath */

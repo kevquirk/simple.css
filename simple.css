@@ -576,6 +576,8 @@ figure > picture > img {
 }
 
 figcaption {
+  position: sticky;
+  left: 0;
   text-align: center;
   font-size: 0.9rem;
   color: var(--text-light);

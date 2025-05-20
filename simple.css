@@ -492,12 +492,12 @@ input[type="radio"]:checked {
 input[type="checkbox"]:checked::after {
   /* Creates a rectangle with colored right and bottom borders which is rotated to look like a check mark */
   content: " ";
-  width: 0.18em;
-  height: 0.32em;
+  width: 0.2em;
+  height: 0.4em;
   border-radius: 0;
   position: absolute;
-  top: 0.05em;
-  left: 0.17em;
+  top: 0.04em;
+  left: 0.18em;
   background-color: transparent;
   border-right: solid var(--bg) 0.08em;
   border-bottom: solid var(--bg) 0.08em;
@@ -507,14 +507,14 @@ input[type="checkbox"]:checked::after {
 input[type="radio"]:checked::after {
   /* creates a colored circle for the checked radio button  */
   content: " ";
-  width: 0.25em;
-  height: 0.25em;
+  width: 0.3em;
+  height: 0.3em;
   border-radius: 100%;
   position: absolute;
   top: 0.125em;
   background-color: var(--bg);
   left: 0.125em;
-  font-size: 1.75em;
+  font-size: 1.8em;
 }
 
 /* Makes input fields wider on smaller screens */

@@ -203,7 +203,7 @@ input[type="button"] {
   line-height: normal;
 }
 
-.button[aria-disabled="true"],
+.button[aria-disabled="true"], 
 input:disabled,
 textarea:disabled,
 select:disabled,
@@ -433,7 +433,7 @@ button,
 .button {
   font-size: inherit;
   font-family: inherit;
-  padding: 0.5em;
+  padding: 0.4375em;
   margin-bottom: 0.5rem;
   border-radius: var(--standard-border-radius);
   box-shadow: none;
@@ -514,7 +514,7 @@ input[type="radio"]:checked::after {
   top: 0.125em;
   background-color: var(--bg);
   left: 0.125em;
-  font-size: 2em;
+  font-size: 1.75em;
 }
 
 /* Makes input fields wider on smaller screens */
@@ -695,8 +695,8 @@ sup {
   top: -0.4em;
 }
 
-sub {
-  top: 0.3em;
+sub { 
+  top: 0.3em; 
 }
 
 /* Classes for notices */

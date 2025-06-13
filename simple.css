@@ -288,6 +288,7 @@ header nav a:hover,
 header nav a.current,
 header nav a[aria-current="page"],
 header nav a[aria-current="true"] {
+  background: var(--bg);
   border-color: var(--accent);
   color: var(--accent);
   cursor: pointer;
@@ -300,6 +301,10 @@ header nav a[aria-current="true"] {
     padding: 0;
     text-decoration: underline;
     line-height: 1;
+  }
+
+  header nav a.current {
+    background: none;
   }
 }
 

@@ -490,11 +490,12 @@ input[type="radio"] {
 }
 
 input[type="checkbox"]:checked,
+input[type="checkbox"]:indeterminate,
 input[type="radio"]:checked {
   background-color: var(--accent);
 }
 
-input[type="checkbox"]:checked::after {
+input[type="checkbox"]:checked:not(:indeterminate)::after {
   /* Creates a rectangle with colored right and bottom borders which is rotated to look like a check mark */
   content: " ";
   width: 0.2em;
@@ -508,6 +509,19 @@ input[type="checkbox"]:checked::after {
   border-bottom: solid var(--bg) 0.08em;
   font-size: 1.8em;
   transform: rotate(45deg);
+}
+input[type="checkbox"]:indeterminate::after {
+  /* Creates a horizontal line for the indeterminate state */
+  content: " ";
+  width: 0.4em;
+  height: 0.08em;
+  border-radius: 0;
+  position: absolute;
+  top: 0.24em;
+  left: 0.08em;
+  border-bottom: solid var(--bg) 0.08em;
+  background-color: var(--bg);
+  font-size: 1.8em;
 }
 input[type="radio"]:checked::after {
   /* creates a colored circle for the checked radio button  */

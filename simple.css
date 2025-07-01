@@ -8,18 +8,25 @@
   --standard-border-radius: 5px;
   --border-width: 1px;
 
+  /* Accent hue */
+  --dark-accent-hue: 80;
+  --light-accent-hue: 260;
+  /* Ucomment the line below to use the same hue for both light and dark theme */
+  /* --light-accent-hue: var(--dark-accent-hue); */
+
   /* Default (light) theme */
-  --bg: #fff;
-  --accent-bg: #f5f7ff;
+  --bg: oklch(100% 0.008 var(--light-accent-hue));
+  --accent-bg: oklch(98% 0.009 var(--light-accent-hue));
   --text: #212121;
   --text-light: #585858;
-  --border: #898EA4;
-  --accent: #0d47a1;
-  --accent-hover: #1266e2;
+  --border: oklch(65% 0.033 var(--light-accent-hue));
+  --accent: oklch(42% 0.154 var(--light-accent-hue));
+  --accent-fill: var(--accent);
+  --accent-hover: oklch(54% 0.2 var(--light-accent-hue));
   --accent-text: var(--bg);
   --code: #d81b60;
   --preformatted: #444;
-  --marked: #ffdd33;
+  --marked: var(--accent-fill);
   --disabled: #efefef;
 }
 
@@ -27,12 +34,13 @@
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
-    --bg: #212121;
-    --accent-bg: #2b2b2b;
-    --text: #dcdcdc;
-    --text-light: #ababab;
-    --accent: #ffb300;
-    --accent-hover: #ffe099;
+    --bg: oklch(25% calc(0.17 * 0.05) var(--dark-accent-hue));
+    --accent-bg: oklch(29% 0.01 var(--dark-accent-hue));
+    --text: oklch(90% 0 0);
+    --text-light: oklch(75% 0 0);
+    --accent: oklch(81% 0.17 var(--dark-accent-hue));
+    --accent-fill: oklch(77% 0.16 var(--dark-accent-hue));
+    --accent-hover: oklch(92% 0.095 calc(var(--dark-accent-hue) + 9));
     --accent-text: var(--bg);
     --code: #f06292;
     --preformatted: #ccc;
@@ -195,8 +203,8 @@ a.button, /* extra specificity to override a */
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-  border: var(--border-width) solid var(--accent);
-  background-color: var(--accent);
+  border: var(--border-width) solid var(--accent-fill);
+  background-color: var(--accent-fill);
   color: var(--accent-text);
   padding: 0.5rem 0.9rem;
   text-decoration: none;
@@ -242,7 +250,7 @@ input:enabled:focus-visible:where(
   [type="reset"],
   [type="button"]
 ) {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--accent-fill);
   outline-offset: 1px;
 }
 
@@ -491,7 +499,7 @@ input[type="radio"] {
 
 input[type="checkbox"]:checked,
 input[type="radio"]:checked {
-  background-color: var(--accent);
+  background-color: var(--accent-fill);
 }
 
 input[type="checkbox"]:checked::after {
@@ -554,7 +562,7 @@ mark {
   padding: 2px 5px;
   border-radius: var(--standard-border-radius);
   background-color: var(--marked);
-  color: black;
+  color: var(--bg);
 }
 
 mark a {
@@ -594,7 +602,7 @@ blockquote {
   margin-inline-end: 0;
   margin-block: 2rem;
   padding: 0.4rem 0.8rem;
-  border-inline-start: 0.35rem solid var(--accent);
+  border-inline-start: 0.35rem solid var(--accent-fill);
   color: var(--text-light);
   font-style: italic;
 }
@@ -660,12 +668,12 @@ progress::-webkit-progress-bar {
 
 progress::-webkit-progress-value {
   border-radius: var(--standard-border-radius);
-  background-color: var(--accent);
+  background-color: var(--accent-fill);
 }
 
 progress::-moz-progress-bar {
   border-radius: var(--standard-border-radius);
-  background-color: var(--accent);
+  background-color: var(--accent-fill);
   transition-property: width;
   transition-duration: 0.3s;
 }

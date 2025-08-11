@@ -19,26 +19,28 @@ jobs:
       - name: Install lftp
         run: sudo apt-get update && sudo apt-get install -y lftp
 
-      - name: Upload changed files to Bunny Storage (SFTP)
+      - name: Upload to Bunny Storage (SFTP)
         env:
-          # Prefer the exact host shown in Bunny > Storage > (your zone) > SFTP & HTTP.
-          # e.g. storage.bunnycdn.com or uk.storage.bunnycdn.com
+          # Use the exact host shown in Bunny (e.g. uk.storage.bunnycdn.com if your zone is UK)
           BUNNY_SFTP_HOST: storage.bunnycdn.com
-          BUNNY_SFTP_USER: ${{ secrets.BUNNY_SFTP_USER }}   # Storage Zone name
-          BUNNY_SFTP_PASS: ${{ secrets.BUNNY_SFTP_PASS }}   # Storage Zone FTP/SFTP password
-          LOCAL_DIR: .                                      # repo root; change to 'public' or 'dist' if needed
-          REMOTE_DIR: /                                     # Storage Zone root
+          BUNNY_SFTP_USER: ${{ secrets.BUNNY_SFTP_USER }}  # Storage Zone name
+          BUNNY_SFTP_PASS: ${{ secrets.BUNNY_SFTP_PASS }}  # Storage Zone FTP/SFTP password
+          LOCAL_DIR: .                                     # change to 'public' or 'dist' if needed
+          REMOTE_DIR: /                                    # Storage Zone root (or /subdir)
         run: |
-          lftp -u "$BUNNY_SFTP_USER","$BUNNY_SFTP_PASS" sftp://"$BUNNY_SFTP_HOST" -e "
-            set sftp:auto-confirm yes;
-            set net:max-retries 2;
-            set net:timeout 20;
-            set net:reconnect-interval-base 5;
-            mirror --reverse --verbose --only-newer --continue --parallel=4 \
-                   --exclude-glob .git* --exclude-glob .github/* --exclude-glob .DS_Store \
-                   \"$LOCAL_DIR\" \"$REMOTE_DIR\";
-            bye
-          "
+          lftp -u "$BUNNY_SFTP_USER","$BUNNY_SFTP_PASS" sftp://"$BUNNY_SFTP_HOST" <<EOF
+          set cmd:fail-exit true
+          set sftp:auto-confirm yes
+          set net:max-retries 2
+          set net:timeout 20
+          set net:reconnect-interval-base 5
+          lcd $LOCAL_DIR
+          cd $REMOTE_DIR
+          mirror --reverse --only-newer --continue --parallel=4 --verbose \
+                 --exclude-glob .git* --exclude-glob .github/* --exclude-glob .DS_Store \
+                 .
+          bye
+          EOF
 
       - name: Purge Bunny Pull Zone cache
         if: ${{ github.event_name == 'push' }}
@@ -46,6 +48,5 @@ jobs:
           BUNNY_API_KEY: ${{ secrets.BUNNY_API_KEY }}
           BUNNY_PULLZONE_ID: ${{ secrets.BUNNY_PULLZONE_ID }}
         run: |
-          curl -sS -X POST \
-            -H "AccessKey: $BUNNY_API_KEY" \
+          curl -sS -X POST -H "AccessKey: $BUNNY_API_KEY" \
             https://api.bunny.net/pullzone/$BUNNY_PULLZONE_ID/purgeCache

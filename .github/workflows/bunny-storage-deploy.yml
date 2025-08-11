@@ -21,36 +21,30 @@ jobs:
 
       - name: Upload changed files to Bunny Storage (SFTP)
         env:
+          # Prefer the exact host shown in Bunny > Storage > (your zone) > SFTP & HTTP.
+          # e.g. storage.bunnycdn.com or uk.storage.bunnycdn.com
           BUNNY_SFTP_HOST: storage.bunnycdn.com
-          BUNNY_SFTP_USER: ${{ secrets.BUNNY_SFTP_USER }}   # Storage Zone name (not your email)
+          BUNNY_SFTP_USER: ${{ secrets.BUNNY_SFTP_USER }}   # Storage Zone name
           BUNNY_SFTP_PASS: ${{ secrets.BUNNY_SFTP_PASS }}   # Storage Zone FTP/SFTP password
-          LOCAL_DIR: public                                  # change if your output lives elsewhere
-          REMOTE_DIR: /                                      # root of the Storage Zone
+          LOCAL_DIR: .                                      # repo root; change to 'public' or 'dist' if needed
+          REMOTE_DIR: /                                     # Storage Zone root
         run: |
-          lftp -u "$BUNNY_SFTP_USER","$BUNNY_SFTP_PASS" sftp://"$BUNNY_SFTP_HOST" << 'EOF'
-          set sftp:auto-confirm yes
-          set net:max-retries 2
-          set net:timeout 20
-          set net:reconnect-interval-base 5
-          open .
-          mirror \
-            --reverse \                # push local -> remote
-            --verbose \                # log progress
-            --only-newer \             # skip unchanged
-            --continue \               # resume partial uploads
-            --parallel=4 \             # faster
-            --exclude-glob .git* \     # ignore junk
-            --exclude-glob .DS_Store \
-            "${LOCAL_DIR}" "${REMOTE_DIR}"
-          bye
-          EOF
+          lftp -u "$BUNNY_SFTP_USER","$BUNNY_SFTP_PASS" sftp://"$BUNNY_SFTP_HOST" -e "
+            set sftp:auto-confirm yes;
+            set net:max-retries 2;
+            set net:timeout 20;
+            set net:reconnect-interval-base 5;
+            mirror --reverse --verbose --only-newer --continue --parallel=4 \
+                   --exclude-glob .git* --exclude-glob .github/* --exclude-glob .DS_Store \
+                   \"$LOCAL_DIR\" \"$REMOTE_DIR\";
+            bye
+          "
 
-      # Optional: purge Pull Zone cache when files change
       - name: Purge Bunny Pull Zone cache
         if: ${{ github.event_name == 'push' }}
         env:
-          BUNNY_API_KEY: ${{ secrets.BUNNY_API_KEY }}       # Account API key
-          BUNNY_PULLZONE_ID: ${{ secrets.BUNNY_PULLZONE_ID }} # Numeric ID of the Pull Zone
+          BUNNY_API_KEY: ${{ secrets.BUNNY_API_KEY }}
+          BUNNY_PULLZONE_ID: ${{ secrets.BUNNY_PULLZONE_ID }}
         run: |
           curl -sS -X POST \
             -H "AccessKey: $BUNNY_API_KEY" \

@@ -21,12 +21,11 @@ jobs:
 
       - name: Upload to Bunny Storage (SFTP)
         env:
-          # Use the exact host shown in Bunny (e.g. uk.storage.bunnycdn.com if your zone is UK)
           BUNNY_SFTP_HOST: storage.bunnycdn.com
           BUNNY_SFTP_USER: ${{ secrets.BUNNY_SFTP_USER }}  # Storage Zone name
           BUNNY_SFTP_PASS: ${{ secrets.BUNNY_SFTP_PASS }}  # Storage Zone FTP/SFTP password
           LOCAL_DIR: .                                     # change to 'public' or 'dist' if needed
-          REMOTE_DIR: /                                    # Storage Zone root (or /subdir)
+          REMOTE_DIR: /                                    # Storage Zone root
         run: |
           lftp -u "$BUNNY_SFTP_USER","$BUNNY_SFTP_PASS" sftp://"$BUNNY_SFTP_HOST" <<EOF
           set cmd:fail-exit true
@@ -36,11 +35,12 @@ jobs:
           set net:reconnect-interval-base 5
           lcd $LOCAL_DIR
           cd $REMOTE_DIR
-          mirror --reverse --only-newer --continue --parallel=4 --verbose \
-                --exclude-glob ".git/**" \
-                --exclude-glob ".github/**" \
-                --exclude-glob ".DS_Store" \
-                .
+          mirror --reverse --only-newer --continue --parallel=4 --verbose --delete \
+                 --exclude-glob ".git/**" \
+                 --exclude-glob ".github/**" \
+                 --exclude-glob ".DS_Store" \
+                 --exclude-glob ".gitignore" \
+                 .
           bye
           EOF
 

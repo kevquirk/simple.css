@@ -37,8 +37,10 @@ jobs:
           lcd $LOCAL_DIR
           cd $REMOTE_DIR
           mirror --reverse --only-newer --continue --parallel=4 --verbose \
-                 --exclude-glob .git* --exclude-glob .github/* --exclude-glob .DS_Store \
-                 .
+                --exclude-glob ".git/**" \
+                --exclude-glob ".github/**" \
+                --exclude-glob ".DS_Store" \
+                .
           bye
           EOF
 

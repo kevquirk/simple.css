@@ -715,6 +715,14 @@ sub {
   margin: 2rem 0;
 }
 
+div.notice p:first-of-type {
+	margin-top: 0;
+}
+
+div.notice p:last-of-type {
+	margin-bottom: 0;
+}
+
 /* Print */
 @media print {
   @page {

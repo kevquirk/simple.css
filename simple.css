@@ -198,7 +198,7 @@ input[type="button"] {
   border: var(--border-width) solid var(--accent);
   background-color: var(--accent);
   color: var(--accent-text);
-  padding: 0.5rem 0.9rem;
+  padding: 0.5em;
   text-decoration: none;
   line-height: normal;
 }

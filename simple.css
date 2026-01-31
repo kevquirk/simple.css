@@ -22,6 +22,9 @@
   --preformatted: #444;
   --marked: #ffdd33;
   --disabled: #efefef;
+  /* Content width on desktop: 45rem means typically 720px, 90rem would be 1440px */
+  --max-content-width-desktop: 45rem; 
+  --max-content-width-mobile: 90%; 
 }
 
 /* Dark theme */
@@ -74,7 +77,7 @@ body {
   font-size: 1.15rem;
   line-height: 1.5;
   display: grid;
-  grid-template-columns: 1fr min(45rem, 90%) 1fr;
+  grid-template-columns: 1fr min(var(--max-content-width-desktop), var(--max-content-width-mobile)) 1fr;
   margin: 0;
 }
 body > * {

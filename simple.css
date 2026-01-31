@@ -22,6 +22,7 @@
   --preformatted: #444;
   --marked: #ffdd33;
   --disabled: #efefef;
+  --notice-color: var(--text);
 }
 
 /* Dark theme */
@@ -38,6 +39,7 @@
     --code: #f06292;
     --preformatted: #ccc;
     --disabled: #111;
+    --notice-color: var(--text);
   }
   /* Add a bit of transparency so light media isn't so glaring in dark mode */
   img,
@@ -709,6 +711,7 @@ sub {
 
 /* Classes for notices */
 .notice {
+  color: var(--notice-color);
   background: var(--accent-bg);
   border: var(--border-width) solid var(--border);
   border-radius: var(--standard-border-radius);

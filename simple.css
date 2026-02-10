@@ -116,6 +116,7 @@ body > footer {
   font-size: 0.9rem;
   text-align: center;
   border-top: var(--border-width) solid var(--border);
+  background-color: var(--bg);
 }
 
 /* Format headers */
@@ -407,6 +408,7 @@ table {
 figure > table {
   width: max-content;
   margin: 0;
+  background-color: rgb(230, 209, 116);
 }
 
 td,
@@ -445,6 +447,7 @@ button,
   box-shadow: none;
   max-width: 100%;
   display: inline-block;
+  background-color: #585858;
 }
 textarea,
 select,
@@ -714,6 +717,7 @@ sub {
   border-radius: var(--standard-border-radius);
   padding: 1.5rem;
   margin: 2rem 0;
+  background-color: #ffdd33;
 }
 
 div.notice p:first-of-type {

@@ -398,6 +398,10 @@ details[open] > :last-child {
   margin-bottom: 0;
 }
 
+details h2:first-of-type {
+  margin-top: 0;
+}
+
 /* Format tables */
 table {
   border-collapse: collapse;

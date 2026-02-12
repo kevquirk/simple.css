@@ -690,6 +690,10 @@ dialog::backdrop {
   opacity: 0.8;
 }
 
+dialog h2:first-of-type {
+  margin-top: 0;
+}
+
 @media only screen and (max-width: 720px) {
   dialog {
     max-width: calc(100vw - 2rem);

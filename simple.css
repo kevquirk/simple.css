@@ -595,6 +595,7 @@ figcaption {
 }
 
 blockquote {
+  max-width: 510px;
   margin-inline-start: 2rem;
   margin-inline-end: 0;
   margin-block: 2rem;

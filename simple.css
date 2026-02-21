@@ -770,7 +770,7 @@ div.notice p:last-of-type {
   mark {
     border: var(--border-width) solid var(--border);
   }
-  pre, table, figure, img, svg {
+  figure {
     break-inside: avoid;
   }
   pre code {

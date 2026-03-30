@@ -51,6 +51,7 @@
   box-sizing: border-box;
 }
 
+
 /* Reset default appearance */
 textarea,
 select,
@@ -776,4 +777,15 @@ div.notice p:last-of-type {
   pre code {
     white-space: pre-wrap;
   }
+}
+
+/*Improved button styling : added hover effect */
+button:hover,
+a:hover {
+     transform: scale(1.05);
+}
+
+button,
+a {
+     transition: transform 0.2s ease;
 }

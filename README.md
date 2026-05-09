@@ -1,11 +1,7 @@
-# Simple.css {}
+# ⚠️ THIS REPO HAS MOVE TO CODEBERG ⚠️
 
-Simple.css is a CSS template that allows you to make a good looking website really quickly.
+**This repo is no longer maintained.** I've moved all of my open source projects over to [Codeberg](https://codeberg.org) in order to reduce my reliance on big tech.
 
-**Find out more at [https://simplecss.org](https://simplecss.org).**
+Please head over to the new repo to see the latest version of this code.
 
-![Screenshot of Simple.css](screenshot.png)
-
-## Supported Browsers
-
-Any evergreen browser > IE11 (why is IE still a thing?)
+[VIEW THIS REPO ON CODERBERG](https://codeberg.org/kevquirk/simple.css)
